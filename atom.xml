@@ -6,7 +6,7 @@
   <link href="https://tsuppari404.github.io/atom.xml" rel="self"/>
   
   <link href="https://tsuppari404.github.io/"/>
-  <updated>2020-11-01T00:19:44.608Z</updated>
+  <updated>2020-10-30T13:36:44.794Z</updated>
   <id>https://tsuppari404.github.io/</id>
   
   <author>
@@ -15,58 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>article title</title>
-    <link href="https://tsuppari404.github.io/2020/11/01/article-title/"/>
-    <id>https://tsuppari404.github.io/2020/11/01/article-title/</id>
-    <published>2020-11-01T00:19:44.000Z</published>
-    <updated>2020-11-01T00:19:44.608Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test_my_site</title>
-    <link href="https://tsuppari404.github.io/2020/10/31/test-my-site-1/"/>
-    <id>https://tsuppari404.github.io/2020/10/31/test-my-site-1/</id>
-    <published>2020-10-31T11:27:38.000Z</published>
-    <updated>2020-10-31T11:27:38.878Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="https://tsuppari404.github.io/2020/10/31/test/"/>
-    <id>https://tsuppari404.github.io/2020/10/31/test/</id>
-    <published>2020-10-31T02:01:12.000Z</published>
-    <updated>2020-10-31T02:01:12.304Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test_my_site</title>
-    <link href="https://tsuppari404.github.io/2020/10/31/test-my-site/"/>
-    <id>https://tsuppari404.github.io/2020/10/31/test-my-site/</id>
-    <published>2020-10-31T01:28:14.000Z</published>
-    <updated>2020-10-31T01:28:14.196Z</updated>
-    
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
