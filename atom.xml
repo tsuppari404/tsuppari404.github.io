@@ -6,7 +6,7 @@
   <link href="https://tsuppari404.github.io/atom.xml" rel="self"/>
   
   <link href="https://tsuppari404.github.io/"/>
-  <updated>2020-11-02T12:20:46.317Z</updated>
+  <updated>2020-11-02T12:53:24.478Z</updated>
   <id>https://tsuppari404.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>步入CTF的第一天</title>
+    <link href="https://tsuppari404.github.io/2020/11/02/%E6%AD%A5%E5%85%A5CTF%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/"/>
+    <id>https://tsuppari404.github.io/2020/11/02/%E6%AD%A5%E5%85%A5CTF%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/</id>
+    <published>2020-11-02T12:35:17.000Z</published>
+    <updated>2020-11-02T12:53:24.478Z</updated>
+    
+    <content type="html"><![CDATA[<p>2020.11.2，收到了第一波教程，今天就算是正式入门CTF的第一天，列下一周的计划</p><h3 id="1-优化Linux环境"><a href="#1-优化Linux环境" class="headerlink" title="1.优化Linux环境"></a>1.优化Linux环境</h3><h3 id="2-开始用博客记录平时遇到的问题及对知识的理解"><a href="#2-开始用博客记录平时遇到的问题及对知识的理解" class="headerlink" title="2.开始用博客记录平时遇到的问题及对知识的理解"></a>2.开始用博客记录平时遇到的问题及对知识的理解</h3><h3 id="3-学汇编，学pwn"><a href="#3-学汇编，学pwn" class="headerlink" title="3.学汇编，学pwn"></a>3.学汇编，学pwn</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2020.11.2，收到了第一波教程，今天就算是正式入门CTF的第一天，列下一周的计划&lt;/p&gt;
+&lt;h3 id=&quot;1-优化Linux环境&quot;&gt;&lt;a href=&quot;#1-优化Linux环境&quot; class=&quot;headerlink&quot; title=&quot;1.优化Linux环境&quot;&gt;&lt;/a&gt;1.</summary>
+      
+    
+    
+    
+    
+    <category term="计划" scheme="https://tsuppari404.github.io/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
   
   <entry>
     <title>markdown</title>
