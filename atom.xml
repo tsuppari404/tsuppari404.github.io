@@ -6,7 +6,7 @@
   <link href="https://tsuppari404.github.io/atom.xml" rel="self"/>
   
   <link href="https://tsuppari404.github.io/"/>
-  <updated>2020-11-12T12:51:58.397Z</updated>
+  <updated>2020-11-12T12:53:58.803Z</updated>
   <id>https://tsuppari404.github.io/</id>
   
   <author>
@@ -21,19 +21,20 @@
     <link href="https://tsuppari404.github.io/2020/11/12/%E5%85%B3%E4%BA%8Efstream%E8%BE%93%E5%85%A5/"/>
     <id>https://tsuppari404.github.io/2020/11/12/%E5%85%B3%E4%BA%8Efstream%E8%BE%93%E5%85%A5/</id>
     <published>2020-11-12T12:45:05.000Z</published>
-    <updated>2020-11-12T12:51:58.397Z</updated>
+    <updated>2020-11-12T12:53:58.803Z</updated>
     
-    <content type="html"><![CDATA[<p>####之前一直忘记了还有一个神奇的头文件叫做fstream，因为之前noip一直用的是freopen()，且noip对文件考察的也不多</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;fstream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">int a,b;</span><br><span class="line">ifstream fin(&quot;1.txt&quot;);</span><br><span class="line">cin&gt;&gt;a;</span><br><span class="line">fin&gt;&gt;b; </span><br><span class="line">if(a&#x3D;&#x3D;b)cout&lt;&lt;&quot;Hello world&quot;;</span><br><span class="line">return 0;</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h4 id="之前一直忘记了还有一个神奇的头文件叫做fstream，因为之前noip一直用的是freopen-，且noip对文件考察的也不多"><a href="#之前一直忘记了还有一个神奇的头文件叫做fstream，因为之前noip一直用的是freopen-，且noip对文件考察的也不多" class="headerlink" title="之前一直忘记了还有一个神奇的头文件叫做fstream，因为之前noip一直用的是freopen()，且noip对文件考察的也不多"></a>之前一直忘记了还有一个神奇的头文件叫做fstream，因为之前noip一直用的是freopen()，且noip对文件考察的也不多</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;fstream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">int a,b;</span><br><span class="line">ifstream fin(&quot;1.txt&quot;);</span><br><span class="line">cin&gt;&gt;a;</span><br><span class="line">fin&gt;&gt;b; </span><br><span class="line">if(a&#x3D;&#x3D;b)cout&lt;&lt;&quot;Hello world&quot;;</span><br><span class="line">return 0;</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;####之前一直忘记了还有一个神奇的头文件叫做fstream，因为之前noip一直用的是freopen()，且noip对文件考察的也不多&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;p</summary>
+    <summary type="html">&lt;h4 id=&quot;之前一直忘记了还有一个神奇的头文件叫做fstream，因为之前noip一直用的是freopen-，且noip对文件考察的也不多&quot;&gt;&lt;a href=&quot;#之前一直忘记了还有一个神奇的头文件叫做fstream，因为之前noip一直用的是freopen-，且noip对文件</summary>
       
     
     
     
+    
+    <category term="学习" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
