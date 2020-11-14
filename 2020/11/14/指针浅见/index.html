@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="看完一遍书之后最大的感受：
+我为啥要学这玩意…从指针的角度来看，指针标示了内存中的一个“位置”，在这个位置上有一个变量；从变量的角度来看，指标示的是变量在内存中的“位置”，类似于数组的下标。
+个人认为，与正常的数据相比，指针的定义与初始化：
+非常复杂！非常容易混淆定义方式：
+1##类型名 *指针变量" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>指针浅见 | 蒟蒻的入土史</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="看完一遍书之后最大的感受： 我为啥要学这玩意…从指针的角度来看，指针标示了内存中的一个“位置”，在这个位置上有一个变量；从变量的角度来看，指标示的是变量在内存中的“位置”，类似于数组的下标。 个人认为，与正常的数据相比，指针的定义与初始化： 非常复杂！非常容易混淆定义方式： 1##类型名 *指针变量名[&#x3D;地址] 其中：类型名是指针变量所指向对象的类型，比如int； * 是用于区分指针变量">
+<meta property="og:type" content="article">
+<meta property="og:title" content="指针浅见">
+<meta property="og:url" content="https://tsuppari404.github.io/2020/11/14/%E6%8C%87%E9%92%88%E6%B5%85%E8%A7%81/index.html">
+<meta property="og:site_name" content="蒟蒻的入土史">
+<meta property="og:description" content="看完一遍书之后最大的感受： 我为啥要学这玩意…从指针的角度来看，指针标示了内存中的一个“位置”，在这个位置上有一个变量；从变量的角度来看，指标示的是变量在内存中的“位置”，类似于数组的下标。 个人认为，与正常的数据相比，指针的定义与初始化： 非常复杂！非常容易混淆定义方式： 1##类型名 *指针变量名[&#x3D;地址] 其中：类型名是指针变量所指向对象的类型，比如int； * 是用于区分指针变量">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-11-14T01:29:52.000Z">
+<meta property="article:modified_time" content="2020-11-14T08:04:14.507Z">
+<meta property="article:author" content="tsuppari404">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="蒟蒻的入土史" type="application/atom+xml">
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="蒟蒻的入土史" rel="home">蒟蒻的入土史</a>
+      </h1>
+      
+        <h2 class="site-description hitokoto"></h2>
+        <script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js"></script>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-指针浅见" class="post-指针浅见 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      指针浅见
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://tsuppari404.github.io/2020/11/14/%E6%8C%87%E9%92%88%E6%B5%85%E8%A7%81/" data-id="ckhh37zow0000ecuu03pw23sz" class="leave-reply bdsharebuttonbox" data-cmd="more"></a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>看完一遍书之后最大的感受：</p>
+<h2 id="我为啥要学这玩意…"><a href="#我为啥要学这玩意…" class="headerlink" title="我为啥要学这玩意…"></a>我为啥要学这玩意…</h2><p>从指针的角度来看，指针标示了内存中的一个“位置”，在这个位置上有一个变量；从变量的角度来看，指标示的是变量在内存中的“位置”，类似于数组的下标。</p>
+<p>个人认为，与正常的数据相比，指针的定义与初始化：</p>
+<h2 id="非常复杂！非常容易混淆"><a href="#非常复杂！非常容易混淆" class="headerlink" title="非常复杂！非常容易混淆"></a>非常复杂！非常容易混淆</h2><p>定义方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">##类型名 *指针变量名[&#x3D;地址]</span><br></pre></td></tr></table></figure>
+<p>其中：类型名是指针变量所指向对象的类型，比如int； * 是用于区分指针变量和其他变量的字符，表示其后的变量名是指针变量；[=地址]用于在定义时初始化指针变量，可省略。</p>
+<p>##关于初始化那些事<br>1.指针指向变量的初始化<br><strong>指针变量名=&amp;变量名</strong><br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a&#x3D;67,*pa&#x3D;&amp;a;&#x2F;&#x2F;定义时初始化</span><br><span class="line">int a&#x3D;67,*pa;</span><br><span class="line">pa&#x3D;&amp;a;&#x2F;&#x2F;定义后初始化，此时不能为*pa&#x3D;&amp;a;</span><br></pre></td></tr></table></figure>
+<p>2.指针指向数组的初始化<br><strong>指针变量名=数组名</strong><br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a[5],*p&#x3D;a;&#x2F;&#x2F;定义时初始化</span><br><span class="line">int a[5],*p;&#x2F;&#x2F;定义后初始化</span><br><span class="line">p&#x3D;a;</span><br></pre></td></tr></table></figure>
+<p>3.使用指针变量初始化其他同类型指针变量<br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">float a&#x3D;3.5,*pa&#x3D;&amp;a;</span><br><span class="line">float *pb&#x3D;pa;&#x2F;&#x2F;定义前初始化</span><br><span class="line">float a&#x3D;3.5,*pa,*pb;</span><br><span class="line">pa&#x3D;&amp;a;</span><br><span class="line">pb&#x3D;pa;</span><br></pre></td></tr></table></figure>
+<p>4.指针可以被初始化为0或NULL<br><strong>指针变量名＝0（NULL）</strong>　　　简单的字面意思</p>
+<p>主要关注的是 * 和 &amp; ， * 号表示其后是指针变量。在其他位置出现时， * 号是乘法运算符。如果与其联系的操作数是指针类型，* 号是乘法运算符。</p>
+<ul>
+<li>和 &amp;，作用刚好相反，&amp;运算符的作用是取变量的地址，* 运算符则取指针所指对象的值，因而，表达式* (&amp;a)与a等价。</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/11/14/%E6%8C%87%E9%92%88%E6%B5%85%E8%A7%81/">
+    <time datetime="2020-11-14T01:29:52.000Z" class="entry-date">
+        2020-11-14
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2020/11/12/%E5%85%B3%E4%BA%8Efstream%E8%BE%93%E5%85%A5/" rel="next">实现自主文件输入和手动输入 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2020/11/14/%E6%8C%87%E9%92%88%E6%B5%85%E8%A7%81/">指针浅见</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/12/%E5%85%B3%E4%BA%8Efstream%E8%BE%93%E5%85%A5/">实现自主文件输入和手动输入</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/06/%E5%85%B3%E4%BA%8EC-%E6%89%93%E5%BC%80%E5%A4%9A%E6%96%87%E4%BB%B6%E5%8F%8A%E5%BE%AA%E7%8E%AF%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE/">关于C++打开多文件及循环读取数据</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/04/%E5%AF%B9%E6%B1%87%E7%BC%96%E7%9A%84%E5%B0%8F%E7%90%86%E8%A7%A3/">对汇编的小理解</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/02/%E6%AD%A5%E5%85%A5CTF%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/">步入CTF的第一天</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%84%9F%E6%83%B3/" rel="tag">感想</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E5%88%92/" rel="tag">计划</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 20px;">学习</a> <a href="/tags/%E6%84%9F%E6%83%B3/" style="font-size: 10px;">感想</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 10px;">计划</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2020 tsuppari404
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

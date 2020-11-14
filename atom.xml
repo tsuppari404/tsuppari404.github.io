@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>蒟蒻的成长史</title>
+  <title>蒟蒻的入土史</title>
   
   
   <link href="https://tsuppari404.github.io/atom.xml" rel="self"/>
   
   <link href="https://tsuppari404.github.io/"/>
-  <updated>2020-11-12T12:53:58.803Z</updated>
+  <updated>2020-11-14T08:04:14.507Z</updated>
   <id>https://tsuppari404.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>指针浅见</title>
+    <link href="https://tsuppari404.github.io/2020/11/14/%E6%8C%87%E9%92%88%E6%B5%85%E8%A7%81/"/>
+    <id>https://tsuppari404.github.io/2020/11/14/%E6%8C%87%E9%92%88%E6%B5%85%E8%A7%81/</id>
+    <published>2020-11-14T01:29:52.000Z</published>
+    <updated>2020-11-14T08:04:14.507Z</updated>
+    
+    <content type="html"><![CDATA[<p>看完一遍书之后最大的感受：</p><h2 id="我为啥要学这玩意…"><a href="#我为啥要学这玩意…" class="headerlink" title="我为啥要学这玩意…"></a>我为啥要学这玩意…</h2><p>从指针的角度来看，指针标示了内存中的一个“位置”，在这个位置上有一个变量；从变量的角度来看，指标示的是变量在内存中的“位置”，类似于数组的下标。</p><p>个人认为，与正常的数据相比，指针的定义与初始化：</p><h2 id="非常复杂！非常容易混淆"><a href="#非常复杂！非常容易混淆" class="headerlink" title="非常复杂！非常容易混淆"></a>非常复杂！非常容易混淆</h2><p>定义方式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">##类型名 *指针变量名[&#x3D;地址]</span><br></pre></td></tr></table></figure><p>其中：类型名是指针变量所指向对象的类型，比如int； * 是用于区分指针变量和其他变量的字符，表示其后的变量名是指针变量；[=地址]用于在定义时初始化指针变量，可省略。</p><p>##关于初始化那些事<br>1.指针指向变量的初始化<br><strong>指针变量名=&amp;变量名</strong><br>例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a&#x3D;67,*pa&#x3D;&amp;a;&#x2F;&#x2F;定义时初始化</span><br><span class="line">int a&#x3D;67,*pa;</span><br><span class="line">pa&#x3D;&amp;a;&#x2F;&#x2F;定义后初始化，此时不能为*pa&#x3D;&amp;a;</span><br></pre></td></tr></table></figure><p>2.指针指向数组的初始化<br><strong>指针变量名=数组名</strong><br>例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a[5],*p&#x3D;a;&#x2F;&#x2F;定义时初始化</span><br><span class="line">int a[5],*p;&#x2F;&#x2F;定义后初始化</span><br><span class="line">p&#x3D;a;</span><br></pre></td></tr></table></figure><p>3.使用指针变量初始化其他同类型指针变量<br>例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">float a&#x3D;3.5,*pa&#x3D;&amp;a;</span><br><span class="line">float *pb&#x3D;pa;&#x2F;&#x2F;定义前初始化</span><br><span class="line">float a&#x3D;3.5,*pa,*pb;</span><br><span class="line">pa&#x3D;&amp;a;</span><br><span class="line">pb&#x3D;pa;</span><br></pre></td></tr></table></figure><p>4.指针可以被初始化为0或NULL<br><strong>指针变量名＝0（NULL）</strong>　　　简单的字面意思</p><p>主要关注的是 * 和 &amp; ， * 号表示其后是指针变量。在其他位置出现时， * 号是乘法运算符。如果与其联系的操作数是指针类型，* 号是乘法运算符。</p><ul><li>和 &amp;，作用刚好相反，&amp;运算符的作用是取变量的地址，* 运算符则取指针所指对象的值，因而，表达式* (&amp;a)与a等价。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;看完一遍书之后最大的感受：&lt;/p&gt;
+&lt;h2 id=&quot;我为啥要学这玩意…&quot;&gt;&lt;a href=&quot;#我为啥要学这玩意…&quot; class=&quot;headerlink&quot; title=&quot;我为啥要学这玩意…&quot;&gt;&lt;/a&gt;我为啥要学这玩意…&lt;/h2&gt;&lt;p&gt;从指针的角度来看，指针标示了内存中的一个“</summary>
+      
+    
+    
+    
+    
+    <category term="学习" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>实现自主文件输入和手动输入</title>
