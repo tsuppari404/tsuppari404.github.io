@@ -65,6 +65,55 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-理性分析一下" class="post-理性分析一下 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/11/14/%E7%90%86%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%80%E4%B8%8B/">理性分析一下</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://tsuppari404.github.io/2020/11/14/%E7%90%86%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%80%E4%B8%8B/" data-id="ckhhpxay90000b0uu3dxa1qwi" class="leave-reply bdsharebuttonbox" data-cmd="more"></a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>刚才仔细想了下，为什么自己从军训结束之后就一直想进攻防小组，虽然目前来看进小组也只是时间问题。</p>
+<p>当初高一升高二的那个暑假，本来有一个可以去长郡进修的机会，虽然说是进修，但是其实也就是去长郡自学，当然这边去实验室也是自学。哪有竞赛不自学。当初我记得是前一天准备说去长郡，火车票都买好了，第二天我们在上课的时候跟我们拉出来说，那边没有开层次更高的班的课，再然后，想去挣扎下说去长郡，老师就已经把票退了。当时也是有点气吧，但是应该也不是老师的意思，应该是学校的意思。后来事实证明去长郡的0基础的同学集训了1个月后，效果确实好，他们1个月学了我们过去一年学的东西，不过过去一年确实也挺混的。</p>
+<p>感觉就是一个学习的氛围的问题，再然后就是一种<strong>被认可的感觉</strong>。在2018noip考试之前，老师也跟我们说，我们确实是比较可惜的一届，我们都努力了，但是最后的结果不如人意。现在也觉得当时的自己不比他们弱，即使现在他们的成绩是我当时根本不敢想的。</p>
+<p>总之现在就是很想去实验室~最近linux要学，python要学，excel要学，C语言也想学。但是都不想去动手。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/11/14/%E7%90%86%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%80%E4%B8%8B/">
+    <time datetime="2020-11-14T12:48:23.000Z" class="entry-date">
+        2020-11-14
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%84%9F%E6%83%B3/" rel="tag">感想</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-指针浅见" class="post-指针浅见 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -92,7 +141,7 @@
 <h2 id="非常复杂！非常容易混淆"><a href="#非常复杂！非常容易混淆" class="headerlink" title="非常复杂！非常容易混淆"></a>非常复杂！非常容易混淆</h2><p>定义方式：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">##类型名 *指针变量名[&#x3D;地址]</span><br></pre></td></tr></table></figure>
 <p>其中：类型名是指针变量所指向对象的类型，比如int； * 是用于区分指针变量和其他变量的字符，表示其后的变量名是指针变量；[=地址]用于在定义时初始化指针变量，可省略。</p>
-<p>##关于初始化那些事<br>1.指针指向变量的初始化<br><strong>指针变量名=&amp;变量名</strong><br>例如：</p>
+<h2 id="关于初始化那些事"><a href="#关于初始化那些事" class="headerlink" title="关于初始化那些事"></a>关于初始化那些事</h2><p>1.指针指向变量的初始化<br><strong>指针变量名=&amp;变量名</strong><br>例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a&#x3D;67,*pa&#x3D;&amp;a;&#x2F;&#x2F;定义时初始化</span><br><span class="line">int a&#x3D;67,*pa;</span><br><span class="line">pa&#x3D;&amp;a;&#x2F;&#x2F;定义后初始化，此时不能为*pa&#x3D;&amp;a;</span><br></pre></td></tr></table></figure>
 <p>2.指针指向数组的初始化<br><strong>指针变量名=数组名</strong><br>例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a[5],*p&#x3D;a;&#x2F;&#x2F;定义时初始化</span><br><span class="line">int a[5],*p;&#x2F;&#x2F;定义后初始化</span><br><span class="line">p&#x3D;a;</span><br></pre></td></tr></table></figure>
@@ -501,6 +550,10 @@
       <ul>
         
           <li>
+            <a href="/2020/11/14/%E7%90%86%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%80%E4%B8%8B/">理性分析一下</a>
+          </li>
+        
+          <li>
             <a href="/2020/11/14/%E6%8C%87%E9%92%88%E6%B5%85%E8%A7%81/">指针浅见</a>
           </li>
         
@@ -516,10 +569,6 @@
             <a href="/2020/11/04/%E5%AF%B9%E6%B1%87%E7%BC%96%E7%9A%84%E5%B0%8F%E7%90%86%E8%A7%A3/">对汇编的小理解</a>
           </li>
         
-          <li>
-            <a href="/2020/11/02/%E6%AD%A5%E5%85%A5CTF%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/">步入CTF的第一天</a>
-          </li>
-        
       </ul>
     </div>
   </aside>
@@ -529,7 +578,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%84%9F%E6%83%B3/" rel="tag">感想</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E5%88%92/" rel="tag">计划</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%84%9F%E6%83%B3/" rel="tag">感想</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E5%88%92/" rel="tag">计划</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </aside>
 
@@ -538,7 +587,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 20px;">学习</a> <a href="/tags/%E6%84%9F%E6%83%B3/" style="font-size: 10px;">感想</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 10px;">计划</a>
+      <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 20px;">学习</a> <a href="/tags/%E6%84%9F%E6%83%B3/" style="font-size: 15px;">感想</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 10px;">计划</a>
     </div>
   </aside>
 
