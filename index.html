@@ -89,7 +89,8 @@
         <p>刚才仔细想了下，为什么自己从军训结束之后就一直想进攻防小组，虽然目前来看进小组也只是时间问题。</p>
 <p>当初高一升高二的那个暑假，本来有一个可以去长郡进修的机会，虽然说是进修，但是其实也就是去长郡自学，当然这边去实验室也是自学。哪有竞赛不自学。当初我记得是前一天准备说去长郡，火车票都买好了，第二天我们在上课的时候跟我们拉出来说，那边没有开层次更高的班的课，再然后，想去挣扎下说去长郡，老师就已经把票退了。当时也是有点气吧，但是应该也不是老师的意思，应该是学校的意思。后来事实证明去长郡的0基础的同学集训了1个月后，效果确实好，他们1个月学了我们过去一年学的东西，不过过去一年确实也挺混的。</p>
 <p>感觉就是一个学习的氛围的问题，再然后就是一种<strong>被认可的感觉</strong>。在2018noip考试之前，老师也跟我们说，我们确实是比较可惜的一届，我们都努力了，但是最后的结果不如人意。现在也觉得当时的自己不比他们弱，即使现在他们的成绩是我当时根本不敢想的。</p>
-<p>总之现在就是很想去实验室~最近linux要学，python要学，excel要学，C语言也想学。但是都不想去动手。<br><img src="/images/2020111401.jpg"></p>
+<p>总之现在就是很想去实验室 ~ 最近linux要学，python要学，excel要学，C语言也想学。但是都不想去动手。</p>
+<p><img src="/images/2020111401.jpg"></p>
 
       
     </div><!-- .entry-content -->
@@ -139,7 +140,7 @@
 <h2 id="我为啥要学这玩意…"><a href="#我为啥要学这玩意…" class="headerlink" title="我为啥要学这玩意…"></a>我为啥要学这玩意…</h2><p>从指针的角度来看，指针标示了内存中的一个“位置”，在这个位置上有一个变量；从变量的角度来看，指标示的是变量在内存中的“位置”，类似于数组的下标。</p>
 <p>个人认为，与正常的数据相比，指针的定义与初始化：</p>
 <h2 id="非常复杂！非常容易混淆"><a href="#非常复杂！非常容易混淆" class="headerlink" title="非常复杂！非常容易混淆"></a>非常复杂！非常容易混淆</h2><p>定义方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">##类型名 *指针变量名[&#x3D;地址]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类型名 *指针变量名[&#x3D;地址]</span><br></pre></td></tr></table></figure>
 <p>其中：类型名是指针变量所指向对象的类型，比如int； * 是用于区分指针变量和其他变量的字符，表示其后的变量名是指针变量；[=地址]用于在定义时初始化指针变量，可省略。</p>
 <h2 id="关于初始化那些事"><a href="#关于初始化那些事" class="headerlink" title="关于初始化那些事"></a>关于初始化那些事</h2><p>1.指针指向变量的初始化<br><strong>指针变量名=&amp;变量名</strong><br>例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a&#x3D;67,*pa&#x3D;&amp;a;&#x2F;&#x2F;定义时初始化</span><br><span class="line">int a&#x3D;67,*pa;</span><br><span class="line">pa&#x3D;&amp;a;&#x2F;&#x2F;定义后初始化，此时不能为*pa&#x3D;&amp;a;</span><br></pre></td></tr></table></figure>
