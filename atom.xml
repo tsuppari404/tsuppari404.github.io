@@ -44,7 +44,7 @@
     <link href="https://tsuppari404.github.io/2020/11/14/%E6%8C%87%E9%92%88%E6%B5%85%E8%A7%81/"/>
     <id>https://tsuppari404.github.io/2020/11/14/%E6%8C%87%E9%92%88%E6%B5%85%E8%A7%81/</id>
     <published>2020-11-14T01:29:52.000Z</published>
-    <updated>2020-11-15T13:51:02.811Z</updated>
+    <updated>2020-11-17T12:37:36.446Z</updated>
     
     <content type="html"><![CDATA[<p>看完一遍书之后最大的感受：</p><h2 id="我为啥要学这玩意…"><a href="#我为啥要学这玩意…" class="headerlink" title="我为啥要学这玩意…"></a>我为啥要学这玩意…</h2><p>从指针的角度来看，指针标示了内存中的一个“位置”，在这个位置上有一个变量；从变量的角度来看，指标示的是变量在内存中的“位置”，类似于数组的下标。</p><p>个人认为，与正常的数据相比，指针的定义与初始化：</p><h2 id="非常复杂！非常容易混淆"><a href="#非常复杂！非常容易混淆" class="headerlink" title="非常复杂！非常容易混淆"></a>非常复杂！非常容易混淆</h2><p>定义方式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类型名 *指针变量名[&#x3D;地址]</span><br></pre></td></tr></table></figure><p>其中：类型名是指针变量所指向对象的类型，比如int； * 是用于区分指针变量和其他变量的字符，表示其后的变量名是指针变量；[=地址]用于在定义时初始化指针变量，可省略。</p><h2 id="关于初始化那些事"><a href="#关于初始化那些事" class="headerlink" title="关于初始化那些事"></a>关于初始化那些事</h2><p>1.指针指向变量的初始化<br><strong>指针变量名=&amp;变量名</strong><br>例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a&#x3D;67,*pa&#x3D;&amp;a;&#x2F;&#x2F;定义时初始化</span><br><span class="line">int a&#x3D;67,*pa;</span><br><span class="line">pa&#x3D;&amp;a;&#x2F;&#x2F;定义后初始化，此时不能为*pa&#x3D;&amp;a;</span><br></pre></td></tr></table></figure><p>2.指针指向数组的初始化<br><strong>指针变量名=数组名</strong><br>例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a[5],*p&#x3D;a;&#x2F;&#x2F;定义时初始化</span><br><span class="line">int a[5],*p;&#x2F;&#x2F;定义后初始化</span><br><span class="line">p&#x3D;a;</span><br></pre></td></tr></table></figure><p>3.使用指针变量初始化其他同类型指针变量<br>例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">float a&#x3D;3.5,*pa&#x3D;&amp;a;</span><br><span class="line">float *pb&#x3D;pa;&#x2F;&#x2F;定义前初始化</span><br><span class="line">float a&#x3D;3.5,*pa,*pb;</span><br><span class="line">pa&#x3D;&amp;a;</span><br><span class="line">pb&#x3D;pa;</span><br></pre></td></tr></table></figure><p>4.指针可以被初始化为0或NULL<br><strong>指针变量名＝0（NULL）</strong>　　　简单的字面意思</p><p>主要关注的是 * 和 &amp; ， * 号表示其后是指针变量。在其他位置出现时， * 号是乘法运算符。如果与其联系的操作数是指针类型，* 号是乘法运算符。</p><ul><li>和 &amp;，作用刚好相反，&amp;运算符的作用是取变量的地址，* 运算符则取指针所指对象的值，因而，表达式* (&amp;a)与a等价。</li></ul>]]></content>
     
@@ -58,7 +58,7 @@
     
     
     
-    <category term="学习" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习　C" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0-C/"/>
     
   </entry>
   
@@ -67,7 +67,7 @@
     <link href="https://tsuppari404.github.io/2020/11/12/%E5%85%B3%E4%BA%8Efstream%E8%BE%93%E5%85%A5/"/>
     <id>https://tsuppari404.github.io/2020/11/12/%E5%85%B3%E4%BA%8Efstream%E8%BE%93%E5%85%A5/</id>
     <published>2020-11-12T12:45:05.000Z</published>
-    <updated>2020-11-12T12:53:58.803Z</updated>
+    <updated>2020-11-17T12:36:07.988Z</updated>
     
     <content type="html"><![CDATA[<h4 id="之前一直忘记了还有一个神奇的头文件叫做fstream，因为之前noip一直用的是freopen-，且noip对文件考察的也不多"><a href="#之前一直忘记了还有一个神奇的头文件叫做fstream，因为之前noip一直用的是freopen-，且noip对文件考察的也不多" class="headerlink" title="之前一直忘记了还有一个神奇的头文件叫做fstream，因为之前noip一直用的是freopen()，且noip对文件考察的也不多"></a>之前一直忘记了还有一个神奇的头文件叫做fstream，因为之前noip一直用的是freopen()，且noip对文件考察的也不多</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;fstream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">int a,b;</span><br><span class="line">ifstream fin(&quot;1.txt&quot;);</span><br><span class="line">cin&gt;&gt;a;</span><br><span class="line">fin&gt;&gt;b; </span><br><span class="line">if(a&#x3D;&#x3D;b)cout&lt;&lt;&quot;Hello world&quot;;</span><br><span class="line">return 0;</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure>]]></content>
     
@@ -80,7 +80,7 @@
     
     
     
-    <category term="学习" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习 C" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0-C/"/>
     
   </entry>
   
@@ -89,7 +89,7 @@
     <link href="https://tsuppari404.github.io/2020/11/06/%E5%85%B3%E4%BA%8EC-%E6%89%93%E5%BC%80%E5%A4%9A%E6%96%87%E4%BB%B6%E5%8F%8A%E5%BE%AA%E7%8E%AF%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE/"/>
     <id>https://tsuppari404.github.io/2020/11/06/%E5%85%B3%E4%BA%8EC-%E6%89%93%E5%BC%80%E5%A4%9A%E6%96%87%E4%BB%B6%E5%8F%8A%E5%BE%AA%E7%8E%AF%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE/</id>
     <published>2020-11-06T05:23:42.000Z</published>
-    <updated>2020-11-06T06:04:19.379Z</updated>
+    <updated>2020-11-17T12:36:08.983Z</updated>
     
     <content type="html"><![CDATA[<h2 id="C-读取多文件"><a href="#C-读取多文件" class="headerlink" title="C++读取多文件"></a>C++读取多文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;我常用freopen命令，头文件就简单的iostream就行</span><br><span class="line">freopen(&quot;文件名.扩展名&quot;,&quot;r&quot;,stdin);&#x2F;&#x2F;r表示read，读取</span><br><span class="line"></span><br><span class="line">cin.clear();&#x2F;&#x2F;表示关闭前一个文件的读取</span><br></pre></td></tr></table></figure><p>若需读取多个文件，如1.txt和2.txt，代码如下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">freopen(&quot;1.txt&quot;,&quot;r&quot;,stdin);</span><br><span class="line">&#x2F;&#x2F;从此开始，之后的输入cin之类的都是读取文件数据</span><br><span class="line"></span><br><span class="line">cin.clear();&#x2F;&#x2F;到此结束</span><br><span class="line">freopen(&quot;2.txt&quot;,&quot;r&quot;,stdin);</span><br><span class="line">&#x2F;&#x2F;现在开始读取2.txt</span><br><span class="line">cin.clear();</span><br><span class="line">freopen(&quot;3.txt&quot;,&quot;w&quot;,stdout);</span><br><span class="line">&#x2F;&#x2F;输出一个3.txt文件，如果路径没特殊注明就输出在exe文件夹内</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h2 id="循环读取数据（未注明输入数据的个数时）"><a href="#循环读取数据（未注明输入数据的个数时）" class="headerlink" title="循环读取数据（未注明输入数据的个数时）"></a>循环读取数据（未注明输入数据的个数时）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a[51],n;</span><br><span class="line">while(cin&gt;&gt;a[++n]);</span><br><span class="line">n--;&#x2F;&#x2F;需要有个n--,原理自己揣摩下(~其实是我不知道~)</span><br></pre></td></tr></table></figure><p>如果手动输入结束用ctrl+Z，文本就不需要</p>]]></content>
     
@@ -102,7 +102,7 @@
     
     
     
-    <category term="学习" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习　C" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0-C/"/>
     
   </entry>
   
@@ -111,7 +111,7 @@
     <link href="https://tsuppari404.github.io/2020/11/04/%E5%AF%B9%E6%B1%87%E7%BC%96%E7%9A%84%E5%B0%8F%E7%90%86%E8%A7%A3/"/>
     <id>https://tsuppari404.github.io/2020/11/04/%E5%AF%B9%E6%B1%87%E7%BC%96%E7%9A%84%E5%B0%8F%E7%90%86%E8%A7%A3/</id>
     <published>2020-11-04T14:15:15.000Z</published>
-    <updated>2020-11-06T06:03:51.266Z</updated>
+    <updated>2020-11-17T12:36:11.735Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/2020110401.jpg"></p><h4 id="用c-的方式来理解"><a href="#用c-的方式来理解" class="headerlink" title="用c++的方式来理解"></a>用c++的方式来理解</h4><p>mov ax,001AH -&gt; ax=001A (H表示16进制，001A是一位16进制数)<br>add ax,85H -&gt; ax+=85<br>add ax,bx -&gt; ax+=bx</p><h3 id="进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令"><a href="#进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令" class="headerlink" title="进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令"></a>进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令</h3><p>mov ax,bl (bl为8位寄存器，ax为16位寄存器)<br>mov al,20000 (al为8位寄存器，数据最大为2^8=256，0-255，而ax为16位寄存器，数据最大为2^16=65536,0-65535，均为十进制)<br>mov al,100H (100H已超出，16进制中1位相当于2进制中4位)</p><p>注意al和ah是构成ax的两个8位寄存器，我第一次看的时候没注意蒙了半天<br><img src="/images/2020110402.jpg"></p><p>之前第一张图的代码用C++理解，代码如下(因为我对C++更熟悉)</p><ol><li>ax=001AH;</li><li>bx=0026H;</li><li>al+=bl;<h3 id="以下省略…推荐在草稿纸上自行演示"><a href="#以下省略…推荐在草稿纸上自行演示" class="headerlink" title="以下省略…推荐在草稿纸上自行演示"></a>以下省略…推荐在草稿纸上自行演示</h3>计算机应用课上自己打的代码…因为实在是…懂得都懂，输入两个十六进制数，输出它们相加的结果(注意是大写字母)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">char a[500],b[500];</span><br><span class="line">int a1[500],b1[500],al,bl,i,max1,ans[500];</span><br><span class="line">cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">al&#x3D;strlen(a);</span><br><span class="line">bl&#x3D;strlen(b);</span><br><span class="line">for(i&#x3D;al;i&gt;&#x3D;1;i--)a[i]&#x3D;a[i-1];</span><br><span class="line">for(i&#x3D;bl;i&gt;&#x3D;1;i--)b[i]&#x3D;b[i-1];</span><br><span class="line">max1&#x3D;max(al,bl);</span><br><span class="line">for(i&#x3D;1;i&lt;&#x3D;max1+1;i++)</span><br><span class="line">&#123;</span><br><span class="line">a1[i]&#x3D;0;</span><br><span class="line">b1[i]&#x3D;0;</span><br><span class="line">ans[i]&#x3D;0;</span><br><span class="line">&#125;</span><br><span class="line">for(i&#x3D;al;i&gt;&#x3D;1;i--)</span><br><span class="line">&#123;</span><br><span class="line">if(a[i]&gt;&#x3D;&#39;0&#39;&amp;&amp;a[i]&lt;&#x3D;&#39;9&#39;)a1[al-i+1]&#x3D;int(a[i])-int(&#39;0&#39;);</span><br><span class="line">if(a[i]&gt;&#x3D;&#39;A&#39;&amp;&amp;a[i]&lt;&#x3D;&#39;F&#39;)a1[al-i+1]&#x3D;int(a[i])-55;</span><br><span class="line">&#125;</span><br><span class="line">for(i&#x3D;bl;i&gt;&#x3D;1;i--)</span><br><span class="line">&#123;</span><br><span class="line">if(b[i]&gt;&#x3D;&#39;0&#39;&amp;&amp;b[i]&lt;&#x3D;&#39;9&#39;)b1[bl-i+1]&#x3D;int(b[i])-int(&#39;0&#39;);</span><br><span class="line">if(b[i]&gt;&#x3D;&#39;A&#39;&amp;&amp;b[i]&lt;&#x3D;&#39;F&#39;)b1[bl-i+1]&#x3D;int(b[i])-55;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;for(i&#x3D;1;i&lt;&#x3D;al;i++)cout&lt;&lt;a1[i]&lt;&lt;&quot; &quot;;</span><br><span class="line">for(i&#x3D;1;i&lt;&#x3D;max1;i++)ans[i]&#x3D;a1[i]+b1[i];</span><br><span class="line">&#x2F;&#x2F;for(i&#x3D;1;i&lt;&#x3D;max1;i++)cout&lt;&lt;ans[i]&lt;&lt;&quot; &quot;;</span><br><span class="line">int h,j;</span><br><span class="line">for(i&#x3D;1;i&lt;&#x3D;max1;i++)</span><br><span class="line">&#123;</span><br><span class="line">h&#x3D;0;</span><br><span class="line">if(ans[i]&gt;&#x3D;16)</span><br><span class="line">&#123;</span><br><span class="line">h&#x3D;ans[i]&#x2F;16;</span><br><span class="line">ans[i]%&#x3D;16;</span><br><span class="line">ans[i+1]+&#x3D;h;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">if(ans[max1+1]!&#x3D;0)max1++;</span><br><span class="line">&#x2F;&#x2F;for(i&#x3D;al;i&gt;&#x3D;1;i--)cout&lt;&lt;a1[i]&lt;&lt;&quot; &quot;;</span><br><span class="line">for(i&#x3D;max1;i&gt;&#x3D;1;i--)</span><br><span class="line">&#123;</span><br><span class="line">if(ans[i]&gt;&#x3D;0&amp;&amp;ans[i]&lt;&#x3D;9)cout&lt;&lt;ans[i];</span><br><span class="line">else cout&lt;&lt;char(ans[i]+55);</span><br><span class="line">&#125;</span><br><span class="line">return 0;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></li></ol><p>输入样例：<br>4E20<br>406<br>输出样例:<br>5226</p>]]></content>
     
@@ -125,7 +125,7 @@
     
     
     
-    <category term="学习" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习 汇编" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0-%E6%B1%87%E7%BC%96/"/>
     
   </entry>
   
@@ -134,7 +134,7 @@
     <link href="https://tsuppari404.github.io/2020/11/02/%E6%AD%A5%E5%85%A5CTF%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/"/>
     <id>https://tsuppari404.github.io/2020/11/02/%E6%AD%A5%E5%85%A5CTF%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/</id>
     <published>2020-11-02T12:35:17.000Z</published>
-    <updated>2020-11-03T04:37:37.018Z</updated>
+    <updated>2020-11-17T12:36:10.755Z</updated>
     
     <content type="html"><![CDATA[<p>2020.11.2，收到了第一波教程，今天就算是正式入门CTF的第一天。</p>]]></content>
     
@@ -148,7 +148,7 @@
     
     
     
-    <category term="计划" scheme="https://tsuppari404.github.io/tags/%E8%AE%A1%E5%88%92/"/>
+    <category term="感想" scheme="https://tsuppari404.github.io/tags/%E6%84%9F%E6%83%B3/"/>
     
   </entry>
   
