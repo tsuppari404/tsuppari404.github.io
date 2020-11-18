@@ -159,13 +159,13 @@
   </entry>
   
   <entry>
-    <title>markdown</title>
+    <title>待消化</title>
     <link href="https://tsuppari404.github.io/2020/11/02/%E7%9F%A5%E8%AF%86%E4%BC%A0%E9%80%81%E9%97%A8/"/>
     <id>https://tsuppari404.github.io/2020/11/02/%E7%9F%A5%E8%AF%86%E4%BC%A0%E9%80%81%E9%97%A8/</id>
     <published>2020-11-02T03:15:57.000Z</published>
-    <updated>2020-11-17T23:47:34.902Z</updated>
+    <updated>2020-11-18T00:42:01.458Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a>传送门</h2><p><a href="https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/">在博客中插入图片</a><br><a href="https://www.jianshu.com/p/399e5a3c7cc5">markdown语法</a><br><a href="https://blog.csdn.net/heimu24/article/details/81189700#%E4%B8%80%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E9%A2%9C%E8%89%B2">markdown进阶</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a>传送门</h2><p><a href="https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/">在博客中插入图片</a><br><a href="https://www.jianshu.com/p/399e5a3c7cc5">markdown语法</a><br><a href="https://blog.csdn.net/heimu24/article/details/81189700#%E4%B8%80%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E9%A2%9C%E8%89%B2">markdown进阶</a><br><a href="https://zhousiwei.gitee.io/2019/05/09/Hexo%E5%8D%9A%E5%AE%A2yilia%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90(%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90)/">博客插入音乐</a><br><a href="https://www.jianshu.com/p/a0afac70afc8">博客置顶</a><br><a href="https://blog.csdn.net/qq_43039472/article/details/104391476">博客多标签</a></p>]]></content>
     
     
       
@@ -177,8 +177,6 @@
     
     
     <category term="学习" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="markdown" scheme="https://tsuppari404.github.io/tags/markdown/"/>
     
   </entry>
   
