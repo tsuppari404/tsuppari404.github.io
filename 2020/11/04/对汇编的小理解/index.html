@@ -10,17 +10,17 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="用c++的方式来理解mov ax,001AH -&gt; ax&#x3D;001A (H表示16进制，001A是一位16进制数)add ax,85H -&gt; ax+&#x3D;85add ax,bx -&gt; ax+&#x3D;bx 进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令mov ax,bl (bl为8位寄存器，ax为16位寄存器)mov al,20000 (al为8位寄存器，数据">
+  <meta name="description" content="用c++的方式来理解mov ax,001AH -&gt; ax&#x3D;001A (H表示16进制，001A是一位16进制数)add ax,85H -&gt; ax+&#x3D;85add ax,bx -&gt; ax+&#x3D;bx 进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令mov ax,bl (bl为8位寄存器，ax为16位寄存器)mov al,20000 (al为8位寄存器，数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="对汇编的小理解">
 <meta property="og:url" content="https://tsuppari404.github.io/2020/11/04/%E5%AF%B9%E6%B1%87%E7%BC%96%E7%9A%84%E5%B0%8F%E7%90%86%E8%A7%A3/index.html">
 <meta property="og:site_name" content="蒟蒻的入土史">
-<meta property="og:description" content="用c++的方式来理解mov ax,001AH -&gt; ax&#x3D;001A (H表示16进制，001A是一位16进制数)add ax,85H -&gt; ax+&#x3D;85add ax,bx -&gt; ax+&#x3D;bx 进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令mov ax,bl (bl为8位寄存器，ax为16位寄存器)mov al,20000 (al为8位寄存器，数据">
+<meta property="og:description" content="用c++的方式来理解mov ax,001AH -&gt; ax&#x3D;001A (H表示16进制，001A是一位16进制数)add ax,85H -&gt; ax+&#x3D;85add ax,bx -&gt; ax+&#x3D;bx 进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令mov ax,bl (bl为8位寄存器，ax为16位寄存器)mov al,20000 (al为8位寄存器，数">
 <meta property="og:locale">
 <meta property="og:image" content="https://tsuppari404.github.io/images/2020110401.jpg">
 <meta property="og:image" content="https://tsuppari404.github.io/images/2020110402.jpg">
 <meta property="article:published_time" content="2020-11-04T14:15:15.000Z">
-<meta property="article:modified_time" content="2020-11-17T23:49:09.551Z">
+<meta property="article:modified_time" content="2020-11-21T15:24:35.822Z">
 <meta property="article:author" content="tsuppari404">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="汇编">
@@ -239,10 +239,11 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><img src="/images/2020110401.jpg"></p>
+    <img src="/images/2020110401.jpg" width="50%" height="50%"/>
+
 <h4 id="用c-的方式来理解"><a href="#用c-的方式来理解" class="headerlink" title="用c++的方式来理解"></a>用c++的方式来理解</h4><p>mov ax,001AH -&gt; ax=001A (H表示16进制，001A是一位16进制数)<br>add ax,85H -&gt; ax+=85<br>add ax,bx -&gt; ax+=bx</p>
 <h3 id="进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令"><a href="#进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令" class="headerlink" title="进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令"></a>进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令</h3><p>mov ax,bl (bl为8位寄存器，ax为16位寄存器)<br>mov al,20000 (al为8位寄存器，数据最大为2^8=256，0-255，而ax为16位寄存器，数据最大为2^16=65536,0-65535，均为十进制)<br>mov al,100H (100H已超出，16进制中1位相当于2进制中4位)</p>
-<p>注意al和ah是构成ax的两个8位寄存器，我第一次看的时候没注意蒙了半天<br><img src="/images/2020110402.jpg"></p>
+<p>注意al和ah是构成ax的两个8位寄存器，我第一次看的时候没注意蒙了半天<br><img src="/images/2020110402.jpg" width="50%" height="50%"/></p>
 <p>之前第一张图的代码用C++理解，代码如下(因为我对C++更熟悉)</p>
 <ol>
 <li>ax=001AH;</li>
