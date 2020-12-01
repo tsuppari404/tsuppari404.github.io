@@ -110,18 +110,19 @@
   </entry>
   
   <entry>
-    <title>关于C++打开多文件及循环读取数据</title>
+    <title>C++循环读取数据</title>
     <link href="https://tsuppari404.github.io/2020/11/06/%E5%85%B3%E4%BA%8EC-%E6%89%93%E5%BC%80%E5%A4%9A%E6%96%87%E4%BB%B6%E5%8F%8A%E5%BE%AA%E7%8E%AF%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE/"/>
     <id>https://tsuppari404.github.io/2020/11/06/%E5%85%B3%E4%BA%8EC-%E6%89%93%E5%BC%80%E5%A4%9A%E6%96%87%E4%BB%B6%E5%8F%8A%E5%BE%AA%E7%8E%AF%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE/</id>
     <published>2020-11-06T05:23:42.000Z</published>
-    <updated>2020-11-17T23:49:30.312Z</updated>
+    <updated>2020-12-01T06:05:43.595Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="C-读取多文件"><a href="#C-读取多文件" class="headerlink" title="C++读取多文件"></a>C++读取多文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;我常用freopen命令，头文件就简单的iostream就行</span><br><span class="line">freopen(&quot;文件名.扩展名&quot;,&quot;r&quot;,stdin);&#x2F;&#x2F;r表示read，读取</span><br><span class="line"></span><br><span class="line">cin.clear();&#x2F;&#x2F;表示关闭前一个文件的读取</span><br></pre></td></tr></table></figure><p>若需读取多个文件，如1.txt和2.txt，代码如下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">freopen(&quot;1.txt&quot;,&quot;r&quot;,stdin);</span><br><span class="line">&#x2F;&#x2F;从此开始，之后的输入cin之类的都是读取文件数据</span><br><span class="line"></span><br><span class="line">cin.clear();&#x2F;&#x2F;到此结束</span><br><span class="line">freopen(&quot;2.txt&quot;,&quot;r&quot;,stdin);</span><br><span class="line">&#x2F;&#x2F;现在开始读取2.txt</span><br><span class="line">cin.clear();</span><br><span class="line">freopen(&quot;3.txt&quot;,&quot;w&quot;,stdout);</span><br><span class="line">&#x2F;&#x2F;输出一个3.txt文件，如果路径没特殊注明就输出在exe文件夹内</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h2 id="循环读取数据（未注明输入数据的个数时）"><a href="#循环读取数据（未注明输入数据的个数时）" class="headerlink" title="循环读取数据（未注明输入数据的个数时）"></a>循环读取数据（未注明输入数据的个数时）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a[51],n;</span><br><span class="line">while(cin&gt;&gt;a[++n]);</span><br><span class="line">n--;&#x2F;&#x2F;需要有个n--,原理自己揣摩下(~其实是我不知道~)</span><br></pre></td></tr></table></figure><p>如果手动输入结束用ctrl+Z，文本就不需要</p>]]></content>
+    <content type="html"><![CDATA[<hr><h2 id="循环读取数据（未注明输入数据的个数时）"><a href="#循环读取数据（未注明输入数据的个数时）" class="headerlink" title="循环读取数据（未注明输入数据的个数时）"></a>循环读取数据（未注明输入数据的个数时）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a[51],n;</span><br><span class="line">while(cin&gt;&gt;a[++n]);</span><br><span class="line">n--;&#x2F;&#x2F;需要有个n--,原理自己揣摩下(~其实是我不知道~)</span><br></pre></td></tr></table></figure><p>如果手动输入结束用ctrl+Z，文本就不需要</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;C-读取多文件&quot;&gt;&lt;a href=&quot;#C-读取多文件&quot; class=&quot;headerlink&quot; title=&quot;C++读取多文件&quot;&gt;&lt;/a&gt;C++读取多文件&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td clas</summary>
+    <summary type="html">&lt;hr&gt;
+&lt;h2 id=&quot;循环读取数据（未注明输入数据的个数时）&quot;&gt;&lt;a href=&quot;#循环读取数据（未注明输入数据的个数时）&quot; class=&quot;headerlink&quot; title=&quot;循环读取数据（未注明输入数据的个数时）&quot;&gt;&lt;/a&gt;循环读取数据（未注明输入数据的个数时）&lt;/h2&gt;</summary>
       
     
     
