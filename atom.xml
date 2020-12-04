@@ -6,7 +6,7 @@
   <link href="https://tsuppari404.github.io/atom.xml" rel="self"/>
   
   <link href="https://tsuppari404.github.io/"/>
-  <updated>2020-11-21T16:09:05.388Z</updated>
+  <updated>2020-12-04T10:34:42.512Z</updated>
   <id>https://tsuppari404.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中文字符与txt那些事</title>
+    <link href="https://tsuppari404.github.io/2020/12/04/%E4%B8%AD%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%8Etxt%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <id>https://tsuppari404.github.io/2020/12/04/%E4%B8%AD%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%8Etxt%E9%82%A3%E4%BA%9B%E4%BA%8B/</id>
+    <published>2020-12-04T10:01:16.000Z</published>
+    <updated>2020-12-04T10:34:42.512Z</updated>
+    
+    <content type="html"><![CDATA[<p>事情的起因：</p><p>在某一天做通报的晚上，由于技术太菜做了好久才做好，整个人就歇菜了~想了想，用cpp一键生成岂不美哉！于是兴冲冲地写了个调试程序</p><img src="/images/2020120401.png" width="50%" height="50%"/><p>然后输出是这个鬼东西…</p><img src="/images/2020120402.png" width="50%" height="50%"/><p>？？？</p><p>后面才发现了原因…</p><h5 id="正文开始，以上全是废话"><a href="#正文开始，以上全是废话" class="headerlink" title="正文开始，以上全是废话"></a>正文开始<del>，以上全是废话</del></h5><p>网上找了下资料，现在发现是编码格式的问题。中文是一种比较特殊的字符，我用英文输入输出都是没有问题的。一般情况下，写字板和记事本文件都能打开txt文件，但是二者的编码格式不同。写字板默认是ASNI，记事本默认是UTF-8。</p><p>不同的编译器编码中文的方式也是不同的。同样是一串C++的代码，我是在Devcpp里面写的代码，放到VScode就是一串錕斤烤烫烫烫</p><img src="/images/2020120403.png" width="50%" height="50%"/><img src="/images/2020120404.png" width="50%" height="50%"/><p>所以以后如果是有关中文输入输出的cpp，要注意一下编码格式…（血的教训）</p><p>之后在网页上查到了记事本是可以修改编码格式的</p><img src="/images/2020120405.png" width="50%" height="50%"/><p>另存为然后修改。</p><p>写字板嘛还真没找到…</p><p><strong>草草结尾~</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;事情的起因：&lt;/p&gt;
+&lt;p&gt;在某一天做通报的晚上，由于技术太菜做了好久才做好，整个人就歇菜了~想了想，用cpp一键生成岂不美哉！于是兴冲冲地写了个调试程序&lt;/p&gt;
+&lt;img src=&quot;/images/2020120401.png&quot; width=&quot;50%&quot; height=&quot;5</summary>
+      
+    
+    
+    
+    
+    <category term="学习" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>阴转晴的周末</title>
