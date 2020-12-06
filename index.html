@@ -323,7 +323,32 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    
+    <p>指令部分：</p>
+<p>1.mov</p>
+<p>mov ax,bx -&gt; C++:ax=bx;</p>
+<p>2.add</p>
+<p>add ax,bx -&gt; C++:ax+=bx;</p>
+<p>3.sub</p>
+<p>add ax,bx -&gt; C++:ax-=bx;</p>
+<p>4.pop</p>
+<p>pop 寄存器/段寄存器/内存单元</p>
+<p>将一个寄存器中的数据入栈</p>
+<p>5.push</p>
+<p>push 寄存器/段寄存器/内存单元</p>
+<p>将一个寄存器中的数据出栈</p>
+<p>关于4、5还是具体看图片吧</p>
+<img src="/images/2020120601.jpg">
+
+<p>6.inc</p>
+<p>inc bx -&gt; C++:bx++;</p>
+<h5 id="易混淆："><a href="#易混淆：" class="headerlink" title="易混淆："></a>易混淆：</h5><p>1.mov ax,[bx]</p>
+<p>bx中存放的数据作为一个偏移地址EA，段地址SA默认在ds中，将SA：EA处的数据送入ax中。即(ax)=((ds)*16+(bx))。ds为段寄存器。</p>
+<p>2.mov [bx],ax</p>
+<p>bx中存放的数据作为一个偏移地址EA，段地址SA默认在ds中，将ax中的数据送入内存SA：EA处。即((ds)*16+(bx))=(ax)。ds为段寄存器。</p>
+<p>3.ax,ah,al</p>
+<p>在8086CPU中，ax是16为寄存器，而ah，al是构成ax的两个8位寄存器，ah为前8位（8<del>15）位，al为后8位（0</del>7）</p>
+<h5 id="更新日志："><a href="#更新日志：" class="headerlink" title="更新日志："></a>更新日志：</h5><p>2020.12.6 创建</p>
+
     
 
     
@@ -334,6 +359,21 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">汇编</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
