@@ -323,13 +323,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>指令部分：</p>
-<p>1.mov</p>
-<p>mov ax,bx -&gt; C++:ax=bx;</p>
-<p>2.add</p>
-<p>add ax,bx -&gt; C++:ax+=bx;</p>
-<p>3.sub</p>
-<p>add ax,bx -&gt; C++:ax-=bx;</p>
+    <h5 id="指令部分："><a href="#指令部分：" class="headerlink" title="指令部分："></a>指令部分：</h5><p>1.mov    mov ax,bx -&gt; C++:ax=bx;</p>
+<p>2.add    add ax,bx -&gt; C++:ax+=bx;</p>
+<p>3.sub    add ax,bx -&gt; C++:ax-=bx;</p>
 <p>4.pop</p>
 <p>pop 寄存器/段寄存器/内存单元</p>
 <p>将一个寄存器中的数据入栈</p>
@@ -337,10 +333,9 @@
 <p>push 寄存器/段寄存器/内存单元</p>
 <p>将一个寄存器中的数据出栈</p>
 <p>关于4、5还是具体看图片吧</p>
-<img src="/images/2020120601.jpg">
+<img src="/images/2020120601.jpg" width="50%" height="50%">
 
-<p>6.inc</p>
-<p>inc bx -&gt; C++:bx++;</p>
+<p>6.inc    inc bx -&gt; C++:bx++;</p>
 <h5 id="易混淆："><a href="#易混淆：" class="headerlink" title="易混淆："></a>易混淆：</h5><p>1.mov ax,[bx]</p>
 <p>bx中存放的数据作为一个偏移地址EA，段地址SA默认在ds中，将SA：EA处的数据送入ax中。即(ax)=((ds)*16+(bx))。ds为段寄存器。</p>
 <p>2.mov [bx],ax</p>
