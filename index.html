@@ -336,13 +336,33 @@
 <img src="/images/2020120601.jpg" width="50%" height="50%">
 
 <p>6.inc bx -&gt; C++:bx++;</p>
+<p>7.loop</p>
+<p>cx中的值影响着loop指令的执行结果，格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">assume cs:code</span><br><span class="line">code segment</span><br><span class="line">	mov ax,2</span><br><span class="line">	mov cx,11</span><br><span class="line">s:	add ax,ax</span><br><span class="line">	loop s</span><br><span class="line">	mov ax,4c00h</span><br><span class="line">	int 21h</span><br><span class="line">code ends</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>上述代码为计算2^12</p>
+<p>执行loop时：</p>
+<p>1.cx-=1</p>
+<p>2.if(cx!=0)s();//如果cx不等于0，转至标号s所标识的地址处执行</p>
+<p>框架如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	mov cx,循环次数</span><br><span class="line">s:</span><br><span class="line">	循环执行的程序段</span><br><span class="line">	loop s</span><br></pre></td></tr></table></figure>
+
+<p>类似于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for(cx&#x3D;循环次数;cx&gt;0;cx--)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
 <h5 id="易混淆："><a href="#易混淆：" class="headerlink" title="易混淆："></a>易混淆：</h5><p>1.mov ax,[bx]</p>
 <p>bx中存放的数据作为一个偏移地址EA，段地址SA默认在ds中，将SA：EA处的数据送入ax中。即(ax)=((ds)*16+(bx))。ds为段寄存器。</p>
 <p>2.mov [bx],ax</p>
 <p>bx中存放的数据作为一个偏移地址EA，段地址SA默认在ds中，将ax中的数据送入内存SA：EA处。即((ds)*16+(bx))=(ax)。ds为段寄存器。</p>
 <p>3.ax,ah,al</p>
 <p>在8086CPU中，ax是16为寄存器，而ah，al是构成ax的两个8位寄存器，ah为前8位（8<del>15）位，al为后8位（0</del>7）</p>
+<p>4.在汇编源程序中，数据不能以字母开头，所以当16进制的数据大小大于9FFFh时，需在前面加0，如0A000h，</p>
 <h5 id="更新日志："><a href="#更新日志：" class="headerlink" title="更新日志："></a>更新日志：</h5><p>2020.12.6 创建</p>
+<p>2020.12.8 更新loop语句、混淆点4</p>
 
     
 
