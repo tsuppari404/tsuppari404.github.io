@@ -6,7 +6,7 @@
   <link href="https://tsuppari404.github.io/atom.xml" rel="self"/>
   
   <link href="https://tsuppari404.github.io/"/>
-  <updated>2021-01-14T14:27:16.739Z</updated>
+  <updated>2021-01-15T04:30:07.766Z</updated>
   <id>https://tsuppari404.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>蒟蒻步入python系列（三）</title>
+    <link href="https://tsuppari404.github.io/2021/01/15/%E8%92%9F%E8%92%BB%E6%AD%A5%E5%85%A5python%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%89%EF%BC%89/"/>
+    <id>https://tsuppari404.github.io/2021/01/15/%E8%92%9F%E8%92%BB%E6%AD%A5%E5%85%A5python%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%89%EF%BC%89/</id>
+    <published>2021-01-15T03:47:24.000Z</published>
+    <updated>2021-01-15T04:30:07.766Z</updated>
+    
+    <content type="html"><![CDATA[<p>两个系列完了之后，蒟蒻开始摸起了海龟</p><p>课上叫我们画一个python（蟒蛇），它大概长这个样子</p><img src="/images/2021011501.png" width="40%" height="40%"><p>emmm属实颜值不高</p><p>代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#PythonDraw.py</span></span><br><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line">turtle.setup(<span class="number">650</span>, <span class="number">350</span>, <span class="number">200</span>, <span class="number">200</span>)</span><br><span class="line">turtle.penup()</span><br><span class="line">turtle.fd(<span class="number">-250</span>)</span><br><span class="line">turtle.pendown()</span><br><span class="line">turtle.pensize(<span class="number">25</span>)</span><br><span class="line">turtle.pencolor(<span class="string">&quot;purple&quot;</span>)</span><br><span class="line">turtle.seth(<span class="number">-40</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>):</span><br><span class="line">    turtle.circle(<span class="number">40</span>, <span class="number">80</span>)</span><br><span class="line">    turtle.circle(<span class="number">-40</span>, <span class="number">80</span>)</span><br><span class="line">turtle.circle(<span class="number">40</span>, <span class="number">80</span>/<span class="number">2</span>)</span><br><span class="line">turtle.fd(<span class="number">40</span>)</span><br><span class="line">turtle.circle(<span class="number">16</span>, <span class="number">180</span>)</span><br><span class="line">turtle.fd(<span class="number">40</span> * <span class="number">2</span>/<span class="number">3</span>)</span><br><span class="line">turtle.done()</span><br></pre></td></tr></table></figure><p>逐行解释吧</p><p>①import，直接理解就是进口的意思，很好理解，就是把turtle库引进来</p><p>②turtle.setup()函数直观地看就是这样</p><img src="/images/2021011502.png" width="40%" height="40%"><p>里面四个参数，具体意思看图应该挺容易理解</p><p>③for &lt;变量&gt; in range(&lt;参数&gt;)</p><p>循环语句应该是最有研究价值的，变量随便定义一个，在执行循环的过程中它只是显示循环的次数。</p><p>后面的range()函数是一个独立的函数，多与循环一起用。它有两种形式：</p><p>range(N)，函数返回由0 ~ N-1的整数序列，共N个数。</p><p>range(N,M)，函数返回由N-1 ~ M的整数序列，共M-N个数。</p><p>④turtle.circle(&lt;运动半径，默认圆心在左侧&gt;,&lt;转动角度&gt;)两个参数，也很好理解。</p><p>⑤turtle.done()姑且先理解为，system(“pause”)就是一个暂停看图像的语句</p><p>具体的turtle的运用戳<a href="https://docs.python.org/zh-cn/3/library/turtle.html">这里</a></p><hr><p>画完python之后，蒟蒻放下了他的海龟</p><p>今日份<a href="https://c.y.qq.com/base/fcgi-bin/u?__=l1vuHEM">宝藏</a></p><img src="/images/2021011503.png" width="40%" height="40%"><p>我好爱这个乐队！！</p><p>2021.1.15 12：24</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;两个系列完了之后，蒟蒻开始摸起了海龟&lt;/p&gt;
+&lt;p&gt;课上叫我们画一个python（蟒蛇），它大概长这个样子&lt;/p&gt;
+&lt;img src=&quot;/images/2021011501.png&quot; width=&quot;40%&quot; height=&quot;40%&quot;&gt;
+
+&lt;p&gt;emmm属实颜值不高&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="学习" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Python" scheme="https://tsuppari404.github.io/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>蒟蒻步入python系列（二）</title>
