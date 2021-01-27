@@ -297,6 +297,121 @@
 
 
   
+    <article id="post-蒟蒻的python笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/01/25/%E8%92%9F%E8%92%BB%E7%9A%84python%E7%AC%94%E8%AE%B0/" target="_blank">蒟蒻的python笔记（随缘更新版）</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/01/25/%E8%92%9F%E8%92%BB%E7%9A%84python%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+        <time datetime="2021-01-25T01:37:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-25</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>从C++转变到Python，最大的感受就是Python里面多了好多库好多函数。特此记下笔记以便自个后续查找。</p>
+<p><strong>函数类（按照字符串顺序排序）：</strong></p>
+<h4 id="list-append-obj"><a href="#list-append-obj" class="headerlink" title="list.append(obj)"></a>list.append(obj)</h4><p>用于在列表末尾添加新的对象，无返回值，但是会改变原来的列表。</p>
+<p>obj – 添加到列表末尾的对象</p>
+<h4 id="str-join-sequence"><a href="#str-join-sequence" class="headerlink" title="str.join(sequence)"></a>str.join(sequence)</h4><p>用于将序列中的元素以指定的字符连接生成一个新的字符串，返回一个连接后的完整的字符串。</p>
+<p>str – 指定的连接字符</p>
+<p>sequence – 待连接的序列，可以是元组，也可以是列表。</p>
+<p><strong>元组与列表区别：</strong></p>
+<p>我理解的元组类似于一种强定义，就是元组内的元素是不可更改的，如果需要改变则需整个元组一起改变。而列表就是一系列字符串的合集，可更改。</p>
+<h4 id="range-start-stop-step"><a href="#range-start-stop-step" class="headerlink" title="range(start, stop[, step])"></a>range(start, stop[, step])</h4><p> python3中函数返回的是一个<strong>可迭代对象（类型是对象）</strong>，而不是<strong>列表类型</strong>（虽然我个人一直理解为列表），可通过list(range())转化为列表。</p>
+<p>start – 计数从 start 开始。默认是从 0 开始。例如range（5）等价于range（0， 5）;</p>
+<p>stop – 计数到 stop 结束，但不包括 stop。例如：range（0， 5） 是[0, 1, 2, 3, 4]没有5</p>
+<p>step – 步长，默认为1。例如：range（0， 5） 等价于 range(0, 5, 1)</p>
+<h4 id="str-split-tmp-num"><a href="#str-split-tmp-num" class="headerlink" title="str.split(tmp,num)"></a>str.split(tmp,num)</h4><p>通过指定分隔符对字符串进行切片，如果参数 num 有指定值，则分隔 num+1 个子字符串。返回分割后的字符串<strong>列表</strong></p>
+<p>str – 待切片<strong>字符串</strong></p>
+<p>tmp – 指定分隔符，如果没有则默认为所有空字符，包括空格、换行（\n）制表符（\t）等</p>
+<p>num – 分割次数，如果没有则默认为-1，即分割所有字符，如果分割次数小于分隔符发现次数，则以从左到右的优先级进行分割。</p>
+<h4 id="str-splitlines-keepends"><a href="#str-splitlines-keepends" class="headerlink" title="str.splitlines([keepends])"></a>str.splitlines([keepends])</h4><p>按照行(‘\r’, ‘\r\n’, \n’)分隔，返回一个<strong>包含各行作为元素的列表</strong>，关于转义字符<a target="_blank" rel="noopener" href="https://blog.csdn.net/Zhongjie1986/article/details/91892331">详情</a></p>
+<p>keepends – 在输出结果里是否保留换行符(‘\r’, ‘\r\n’, \n’)，默认为 False，不包含换行符，如果为 True，则保留换行符。</p>
+<h4 id="str-strip-chars"><a href="#str-strip-chars" class="headerlink" title="str.strip([chars])"></a>str.strip([chars])</h4><p>用于移除字符串<strong>头尾</strong>指定的字符（默认为空格或换行符）或字符序列，仅能删除头尾的指定字符，返回一个<strong>新生成的字符串</strong>。只要头尾包含有指定字符序列中的字符就删除。</p>
+<p>chars – 移除字符串头尾指定的字符序列</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    <div class="article-pop-out tagcloud">
+      <i class="icon-tuding"></i>
+      <a class="article-tag-list-link color3">置顶</a>
+    </div>
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/01/25/%E8%92%9F%E8%92%BB%E7%9A%84python%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-类似于学期总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -417,104 +532,6 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2021/01/25/%E7%B1%BB%E4%BC%BC%E4%BA%8E%E5%AD%A6%E6%9C%9F%E6%80%BB%E7%BB%93/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-蒟蒻的python笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/01/25/%E8%92%9F%E8%92%BB%E7%9A%84python%E7%AC%94%E8%AE%B0/" target="_blank">蒟蒻的python笔记（随缘更新版）</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/01/25/%E8%92%9F%E8%92%BB%E7%9A%84python%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2021-01-25T01:37:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-25</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>从C++转变到Python，最大的感受就是Python里面多了好多库好多函数。特此记下笔记以便自个后续查找。</p>
-<h4 id="函数类（按照字符串顺序排序）："><a href="#函数类（按照字符串顺序排序）：" class="headerlink" title="函数类（按照字符串顺序排序）："></a>函数类（按照字符串顺序排序）：</h4><h5 id="range-start-stop-step"><a href="#range-start-stop-step" class="headerlink" title="range(start, stop[, step])"></a>range(start, stop[, step])</h5><p> python3中函数返回的是一个<strong>可迭代对象（类型是对象）</strong>，而不是<strong>列表类型</strong>（虽然我个人一直理解为列表），可通过list(range())转化为列表。</p>
-<p>start – 计数从 start 开始。默认是从 0 开始。例如range（5）等价于range（0， 5）;</p>
-<p>stop – 计数到 stop 结束，但不包括 stop。例如：range（0， 5） 是[0, 1, 2, 3, 4]没有5</p>
-<p>step – 步长，默认为1。例如：range（0， 5） 等价于 range(0, 5, 1)</p>
-<h5 id="str-splitlines-keepends"><a href="#str-splitlines-keepends" class="headerlink" title="str.splitlines([keepends])"></a>str.splitlines([keepends])</h5><p>按照行(‘\r’, ‘\r\n’, \n’)分隔，返回一个<strong>包含各行作为元素的列表</strong>，关于转义字符<a target="_blank" rel="noopener" href="https://blog.csdn.net/Zhongjie1986/article/details/91892331">详情</a></p>
-<p>keepends – 在输出结果里是否保留换行符(‘\r’, ‘\r\n’, \n’)，默认为 False，不包含换行符，如果为 True，则保留换行符。</p>
-<h5 id="str-strip-chars"><a href="#str-strip-chars" class="headerlink" title="str.strip([chars])"></a>str.strip([chars])</h5><p>用于移除字符串<strong>头尾</strong>指定的字符（默认为空格或换行符）或字符序列，仅能删除头尾的指定字符，返回一个<strong>新生成的字符串</strong>。只要头尾包含有指定字符序列中的字符就删除。</p>
-<p>chars – 移除字符串头尾指定的字符序列</p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/01/25/%E8%92%9F%E8%92%BB%E7%9A%84python%E7%AC%94%E8%AE%B0/">展开全文 >></a>
     </p>
     
 
