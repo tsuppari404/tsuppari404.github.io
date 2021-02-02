@@ -359,6 +359,23 @@
 </li>
 </ul>
 <p>返回值：一个可迭代对象。</p>
+<h4 id="list-remove-obj"><a href="#list-remove-obj" class="headerlink" title="list.remove(obj)"></a>list.remove(obj)</h4><p>remove() 函数用于移除列表中某个值的第一个匹配项。删除一个指定值，只会删除第一个，删除后不会往后寻找后面的项目。</p>
+<ul>
+<li>obj – 列表中要移除的对象。</li>
+</ul>
+<p>返回值：无，但是会删除列表中的值。</p>
+<p>若要删除所有指定元素：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="built_in">str</span> <span class="keyword">in</span> <span class="built_in">list</span>:</span><br><span class="line">	<span class="built_in">list</span>.remove(<span class="string">&#x27;str&#x27;</span>)</span><br><span class="line">print(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
+
+<p>str为指定元素，list为列表。</p>
+<p>也可以用replace()，需注意的是replace()的对象是字符串，需要与join()和split()一起使用，较麻烦。</p>
+<h4 id="str-replace-old-new-max"><a href="#str-replace-old-new-max" class="headerlink" title="str.replace(old,new[,max])"></a>str.replace(old,new[,max])</h4><p>replace()函数把字符串中 old（旧字符串） 替换成 new(新字符串)，如果指定第三个参数max，则替换不超过 max 次。</p>
+<ul>
+<li>old – 将被替换的子字符串。</li>
+<li>new – 新字符串，用于替换old子字符串。</li>
+<li>max – 可选字符串, 替换不超过 max 次。</li>
+</ul>
+<p>返回值：一个替换过后新生成的<strong>字符串</strong>。</p>
 <h4 id="list-sort-cmp-None-key-None-reverse-False"><a href="#list-sort-cmp-None-key-None-reverse-False" class="headerlink" title="list.sort(cmp=None, key=None, reverse=False)"></a>list.sort(cmp=None, key=None, reverse=False)</h4><p><strong>sort()</strong> 函数用于对原<strong>列表</strong>进行排序，默认是将列表中的数据按照升序排列，如果指定参数，则使用比较函数指定的比较函数。</p>
 <ul>
 <li><p>cmp – 可选参数, 如果指定了该参数会使用该参数的方法进行排序。</p>
@@ -384,11 +401,12 @@
 <li>keepends – 在输出结果里是否保留换行符(‘\r’, ‘\r\n’, \n’)，默认为 False，不包含换行符，如果为 True，则保留换行符。</li>
 </ul>
 <p>返回值：一个包含各行作为元素的<strong>列表</strong>。</p>
-<h4 id="str-strip-chars"><a href="#str-strip-chars" class="headerlink" title="str.strip([chars])"></a>str.strip([chars])</h4><p>用于移除字符串<strong>头尾</strong>指定的字符（默认为空格或换行符）或字符序列，仅能删除头尾的指定字符，返回一个<strong>新生成的字符串</strong>。只要头尾包含有指定字符序列中的字符就删除。</p>
+<h4 id="str-strip-chars"><a href="#str-strip-chars" class="headerlink" title="str.strip([chars])"></a>str.strip([chars])</h4><p>用于移除字符串<strong>头尾</strong>指定的字符（默认为空格或换行符）或字符序列，仅能删除头尾的指定字符，对字符串中间的字符没有影响。返回一个<strong>新生成的字符串</strong>。只要头尾包含有指定字符序列中的字符就删除。</p>
 <ul>
 <li>chars – 移除字符串头尾指定的字符序列</li>
 </ul>
 <p>返回值：一个新生成的<strong>字符串</strong></p>
+<p>而str.lstrip([chars])和str.rstrip([chars])分别删除字符串左边和右边的指定字符，默认为空格。</p>
 
     
 
