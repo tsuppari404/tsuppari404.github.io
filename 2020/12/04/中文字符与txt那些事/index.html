@@ -10,12 +10,12 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="事情的起因： 在某一天做通报的晚上，由于技术太菜做了好久才做好，整个人就歇菜了~想了想，用cpp一键生成岂不美哉！于是兴冲冲地写了个调试程序   然后输出是这个鬼东西…   ？？？ 后面才发现了原因… 正文开始，以上全是废话网上找了下资料，现在发现是编码格式的问题。中文是一种比较特殊的字符，我用英文输入输出都是没有问题的。一般情况下，写字板和记事本文件都能打开txt文件，但是二者的编码格式不同。写">
+  <meta name="description" content="事情的起因： 在某一天做通报的晚上，由于技术太菜做了好久才做好，整个人就歇菜了~想了想，用cpp一键生成岂不美哉！于是兴冲冲地写了个调试程序   然后输出是这个鬼东西…   ？？？ 后面才发现了原因…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="中文字符与txt那些事">
 <meta property="og:url" content="https://tsuppari404.github.io/2020/12/04/%E4%B8%AD%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%8Etxt%E9%82%A3%E4%BA%9B%E4%BA%8B/index.html">
 <meta property="og:site_name" content="蒟蒻的入土史">
-<meta property="og:description" content="事情的起因： 在某一天做通报的晚上，由于技术太菜做了好久才做好，整个人就歇菜了~想了想，用cpp一键生成岂不美哉！于是兴冲冲地写了个调试程序   然后输出是这个鬼东西…   ？？？ 后面才发现了原因… 正文开始，以上全是废话网上找了下资料，现在发现是编码格式的问题。中文是一种比较特殊的字符，我用英文输入输出都是没有问题的。一般情况下，写字板和记事本文件都能打开txt文件，但是二者的编码格式不同。写">
+<meta property="og:description" content="事情的起因： 在某一天做通报的晚上，由于技术太菜做了好久才做好，整个人就歇菜了~想了想，用cpp一键生成岂不美哉！于是兴冲冲地写了个调试程序   然后输出是这个鬼东西…   ？？？ 后面才发现了原因…">
 <meta property="og:locale">
 <meta property="og:image" content="https://tsuppari404.github.io/images/2020120401.png">
 <meta property="og:image" content="https://tsuppari404.github.io/images/2020120402.png">
@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://tsuppari404.github.io/images/2020120404.png">
 <meta property="og:image" content="https://tsuppari404.github.io/images/2020120405.png">
 <meta property="article:published_time" content="2020-12-04T10:01:16.000Z">
-<meta property="article:modified_time" content="2020-12-04T10:34:42.512Z">
+<meta property="article:modified_time" content="2021-02-05T12:20:13.642Z">
 <meta property="article:author" content="つっぱり">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -266,6 +266,8 @@
 
 <p>？？？</p>
 <p>后面才发现了原因…</p>
+<a id="more"></a>
+
 <h5 id="正文开始，以上全是废话"><a href="#正文开始，以上全是废话" class="headerlink" title="正文开始，以上全是废话"></a>正文开始<del>，以上全是废话</del></h5><p>网上找了下资料，现在发现是编码格式的问题。中文是一种比较特殊的字符，我用英文输入输出都是没有问题的。一般情况下，写字板和记事本文件都能打开txt文件，但是二者的编码格式不同。写字板默认是ASNI，记事本默认是UTF-8。</p>
 <p>不同的编译器编码中文的方式也是不同的。同样是一串C++的代码，我是在Devcpp里面写的代码，放到VScode就是一串錕斤烤烫烫烫</p>
 <img src="/images/2020120403.png" width="50%" height="50%"/>
