@@ -6,7 +6,7 @@
   <link href="https://tsuppari404.github.io/atom.xml" rel="self"/>
   
   <link href="https://tsuppari404.github.io/"/>
-  <updated>2021-02-05T12:18:17.212Z</updated>
+  <updated>2021-02-20T04:29:15.027Z</updated>
   <id>https://tsuppari404.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>蒟蒻的C笔记</title>
+    <link href="https://tsuppari404.github.io/2021/02/20/%E8%92%9F%E8%92%BB%E7%9A%84C%E7%AC%94%E8%AE%B0/"/>
+    <id>https://tsuppari404.github.io/2021/02/20/%E8%92%9F%E8%92%BB%E7%9A%84C%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-02-20T03:15:18.000Z</published>
+    <updated>2021-02-20T04:29:15.027Z</updated>
+    
+    <content type="html"><![CDATA[<p>要学pwn还是要学挺多C语言的函数的，为之前没打好基础留下了悔恨的泪水…所以也记一些常用的知识吧～</p><a id="more"></a><p><strong>函数类：</strong></p><h4 id="void-memset-void-str-int-c-size-t-n"><a href="#void-memset-void-str-int-c-size-t-n" class="headerlink" title="void *memset(void *str,int c,size_t n)"></a>void *memset(void *str,int c,size_t n)</h4><p>复制字符<strong>c</strong>（无符号字符）到参数<strong>str</strong>所指向的字符串的<strong>前n个</strong>字符。</p><ul><li><strong>str</strong> – 指向要填充的内存块。</li><li><strong>c</strong> – 要被设置的值。该值以 int 形式传递，但是函数在填充内存块时是使用该值的<strong>无符号字符</strong>形式。</li><li><strong>n</strong> – 要被设置为该值的字符数。</li></ul><p>返回值：一个指向存储区str的指针。</p><h4 id="int-puts-const-char-str"><a href="#int-puts-const-char-str" class="headerlink" title="int puts(const char *str)"></a>int puts(const char *str)</h4><p>把一个字符串写入到标准输出 stdout，直到空字符，但不包括空字符。<strong>换行符会被追加到输出中</strong>。输出完str自动输出一个换行符。</p><ul><li><strong>str</strong> – 这是要被写入的 C 字符串。</li></ul><p>返回值：若成功，函数返回一个非负值，若发生错误，返回EOF（EOF是一个计算机术语，为End Of File的缩写，在操作系统中表示资料源无更多的资料可读取。 资料源通常称为档案或串流。 通常在文本的最后存在此字符表示资料结束。）。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;要学pwn还是要学挺多C语言的函数的，为之前没打好基础留下了悔恨的泪水…所以也记一些常用的知识吧～&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="学习" scheme="https://tsuppari404.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="C" scheme="https://tsuppari404.github.io/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>类似于学期总结</title>
