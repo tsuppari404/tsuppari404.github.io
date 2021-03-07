@@ -19,7 +19,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="https://tsuppari404.github.io/images/2021022701.png">
 <meta property="article:published_time" content="2021-02-27T12:57:20.000Z">
-<meta property="article:modified_time" content="2021-02-28T02:57:25.930Z">
+<meta property="article:modified_time" content="2021-03-07T03:39:54.039Z">
 <meta property="article:author" content="つっぱり">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="C++">
@@ -234,7 +234,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">968字</span>
+      <span class="post-count">1.6k字</span>
     </span>
   </span>
 
@@ -243,7 +243,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">3分</span>
+      <span class="post-count">5分</span>
     </span>
   </span>
 </div>
@@ -287,7 +287,7 @@
 
 <h5 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h5><p>是一种编程语言结构，用来建议编译器对一些特殊函数进行内联扩展。也就是说建议编译器将指定的函数体插入并取代每一处调用该函数的地方（上下文），从而节省了每次调用函数带来的额外时间开支。类似于用空间换时间。</p>
 <h5 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h5><p>一般函数进行调用时，要将程序执行权转到被调用函数中，然后再返回到调用它的函数中；而内联函数调用时，是将调用表达式用内联函数体来替换，即类似于宏。</p>
-<h4 id="6-运算符重载"><a href="#6-运算符重载" class="headerlink" title="6.运算符重载"></a>6.运算符重载</h4><h5 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h5><p>运算符是一种告诉编译器执行特定的数学或逻辑操作的符号。C++中有以下类型:</p>
+<h4 id="6-运算符重载"><a href="#6-运算符重载" class="headerlink" title="6.运算符重载"></a>6.运算符重载</h4><p>运算符是一种告诉编译器执行特定的数学或逻辑操作的符号。C++中有以下类型:</p>
 <ul>
 <li>算术运算符</li>
 <li>关系运算符</li>
@@ -296,6 +296,22 @@
 <li>赋值运算符</li>
 <li>杂项运算符</li>
 </ul>
+<p>运算符重载，就是对已有的运算符重新进行定义，赋予其另一种功能，以适应不同的数据类型。</p>
+<p>重载运算符的规则：</p>
+<p>①C++不允许用户自己定义新的运算符，只能对C++已有的C++运算符进行重载</p>
+<p>②C++不能重载的运算符只有５个，.（成员访问运算符）、.*（成员指针访问运算符）、::（域运算符）、sizeof（长度运算符）和?:（条件运算符）</p>
+<p>③重载不能改变的运算符运算对象的个数</p>
+<p>④重载不能改变运算符的优先性和结合性</p>
+<p>⑤重载运算符的函数不能有默认的参数</p>
+<p>⑥重载的运算符<strong>必须和用户定义的自定义类型的对象一起使用</strong>，至少应有一个是类对象，即不允许参数全部是C++的标准类型。</p>
+<h4 id="7-原码与补码"><a href="#7-原码与补码" class="headerlink" title="7.原码与补码"></a>7.原码与补码</h4><p>整数在计算机中存储和运算通常采用的格式是<strong>补码</strong>。原因：补码可以将符号位和数值域统一处理；同时，加法和减法也可以统一处理。原码直接用于数字相加减可能会出错。</p>
+<p>原码-&gt;补码：通常用二进制表示。除符号位（通常为首位，0+1-），其余位数取反后末位+1.</p>
+<p>补码-&gt;原码：取反后末位+1</p>
+<h4 id="8-对象"><a href="#8-对象" class="headerlink" title="8.对象"></a>8.对象</h4><p>对象是一个储存器的地址，其实拥有值，可能有标识符指向此处。在软件中对象具有唯一的标识符，对象包括属性和方法，属性就是需要记忆的信息，方法就是对象能够提供的服务。在面向对象（Object Oriented）的软件中，对象（Object）是某一个类（Class）的实例。</p>
+<h4 id="9-软件工程三要素"><a href="#9-软件工程三要素" class="headerlink" title="9.软件工程三要素"></a>9.软件工程三要素</h4><p>方法、工具、过程。</p>
+<p><strong>方法</strong>是完成软件开发的各项任务的技术方法，为软件开发提供“如何做”的技术。</p>
+<p><strong>工具</strong>为运用方法而提供的自动的或半自动的软件工程的支撑环境。</p>
+<p><strong>过程</strong>是为了获得高质量的软件所需要完成的一系列任务的框架，它规定了完成各项任务的工作步骤，如何将软件工程方法与软件工具相结合，合理、及时地进行软件开发。</p>
 
     
 
