@@ -370,6 +370,16 @@
                     class="icon icon-quo-right"></i></p>
                 <div class="reward-box">
                   
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/images/Alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/images/WeChatpay.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
                   
                 </div>
               </span>
@@ -517,6 +527,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#list-append-obj"><span class="toc-number">1.</span> <span class="toc-text">list.append(obj)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#chr-i"><span class="toc-number">2.</span> <span class="toc-text">chr(i)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#list-insert-index-obj"><span class="toc-number">3.</span> <span class="toc-text">list insert(index, obj)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#str-join-sequence"><span class="toc-number">4.</span> <span class="toc-text">str.join(sequence)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#map-function-iterable-%E2%80%A6"><span class="toc-number">5.</span> <span class="toc-text">map(function,iterable,…)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ord-c"><span class="toc-number">6.</span> <span class="toc-text">ord(c)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#range-start-stop-step"><span class="toc-number">7.</span> <span class="toc-text">range(start, stop[, step])</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#list-remove-obj"><span class="toc-number">8.</span> <span class="toc-text">list.remove(obj)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#str-replace-old-new-max"><span class="toc-number">9.</span> <span class="toc-text">str.replace(old,new[,max])</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#list-sort-cmp-None-key-None-reverse-False"><span class="toc-number">10.</span> <span class="toc-text">list.sort(cmp&#x3D;None, key&#x3D;None, reverse&#x3D;False)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#str-split-tmp-num"><span class="toc-number">11.</span> <span class="toc-text">str.split(tmp,num)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#str-splitlines-keepends"><span class="toc-number">12.</span> <span class="toc-text">str.splitlines([keepends])</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#str-strip-chars"><span class="toc-number">13.</span> <span class="toc-text">str.strip([chars])</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -535,6 +558,30 @@
 </script>
 
 
+
+
+
+
+  <div id="giteement-ctn"></div>
+  
+    <link rel="stylesheet" href="/lib/default.css">
+    <script src="/lib/giteement.browser.js"></script>
+  
+  <script>
+  <!-- id: "蒟蒻的python笔记（随缘更新版）" -->
+  var giteement = new Giteement({
+    id: '20210125093708',
+    owner: '',
+    repo: '',
+    backcall_uri: '',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '',
+      client_secret: ''
+    },
+  })
+  giteement.render('giteement-ctn')
+  </script>
 
 
 
@@ -869,6 +916,35 @@
   </div>
 
   
+<script type="text/javascript" src="/plugins/TweenMax/TweenMax.min.js"></script>
+<script type="text/javascript" src="/plugins/TweenMax/HoverImg.js"></script>
+
+<script>
+
+
+  var hoverEffect = {
+    "subNav": ".left-col .social a"
+  }
+
+
+  for (var x in hoverEffect) {
+    // 初始化data-img属性值
+    let $em = document.querySelectorAll(hoverEffect[x]);
+    $em.forEach(($a) => {
+      //console.log($a.href);
+      if (isImageType($a.href)) {
+        $a.setAttribute("data-img", $a.href)
+      }
+    })
+    // 实现悬停元素预览图片效果
+    let $a = document.querySelectorAll(hoverEffect[x] + "[data-img]");
+    $a.forEach(($em) => {
+      new HoverImgFx1($em)
+    })
+  }
+
+</script>
+
   
 <script type="text/javascript" src="/plugins/activate-power-mode/activate-power-mode.js"></script>
 <script>
@@ -914,10 +990,10 @@
     },
     display: {
        position: "right", 
-       width: 145, 
-       height: 315, 
-       hOffset: 50, 
-       vOffset: -20 
+       width: 160, 
+       height: 320, 
+       hOffset: 90, 
+       vOffset: 10 
     },
     mobile: {
        show: false, 

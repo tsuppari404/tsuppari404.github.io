@@ -10,17 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="用c++的方式来理解mov ax,001AH -&gt; ax&#x3D;001A (H表示16进制，001A是一位16进制数)add ax,85H -&gt; ax+&#x3D;85add ax,bx -&gt; ax+&#x3D;bx 进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令mov ax,bl (bl为8位寄存器，ax为16位寄存器)mov al,20000 (al为8位寄存器，数">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="article">
 <meta property="og:title" content="对汇编的小理解">
 <meta property="og:url" content="https://tsuppari404.github.io/2020/11/04/%E5%AF%B9%E6%B1%87%E7%BC%96%E7%9A%84%E5%B0%8F%E7%90%86%E8%A7%A3/index.html">
 <meta property="og:site_name" content="蒟蒻的入土史">
-<meta property="og:description" content="用c++的方式来理解mov ax,001AH -&gt; ax&#x3D;001A (H表示16进制，001A是一位16进制数)add ax,85H -&gt; ax+&#x3D;85add ax,bx -&gt; ax+&#x3D;bx 进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令mov ax,bl (bl为8位寄存器，ax为16位寄存器)mov al,20000 (al为8位寄存器，数">
 <meta property="og:locale">
 <meta property="og:image" content="https://tsuppari404.github.io/images/2020110401.jpg">
 <meta property="og:image" content="https://tsuppari404.github.io/images/2020110402.jpg">
 <meta property="article:published_time" content="2020-11-04T14:15:15.000Z">
-<meta property="article:modified_time" content="2021-02-05T12:19:08.826Z">
+<meta property="article:modified_time" content="2021-04-28T02:29:11.435Z">
 <meta property="article:author" content="つっぱり">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="汇编">
@@ -257,6 +255,8 @@
     
     <img src="/images/2020110401.jpg" width="50%" height="50%"/>
 
+<a id="more"></a>
+
 <h4 id="用c-的方式来理解"><a href="#用c-的方式来理解" class="headerlink" title="用c++的方式来理解"></a>用c++的方式来理解</h4><p>mov ax,001AH -&gt; ax=001A (H表示16进制，001A是一位16进制数)<br>add ax,85H -&gt; ax+=85<br>add ax,bx -&gt; ax+=bx</p>
 <h3 id="进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令"><a href="#进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令" class="headerlink" title="进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令"></a>进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令</h3><p>mov ax,bl (bl为8位寄存器，ax为16位寄存器)<br>mov al,20000 (al为8位寄存器，数据最大为2^8=256，0-255，而ax为16位寄存器，数据最大为2^16=65536,0-65535，均为十进制)<br>mov al,100H (100H已超出，16进制中1位相当于2进制中4位)</p>
 <p>注意al和ah是构成ax的两个8位寄存器，我第一次看的时候没注意蒙了半天<br><img src="/images/2020110402.jpg" width="50%" height="50%"/></p>
@@ -286,6 +286,16 @@
                     class="icon icon-quo-right"></i></p>
                 <div class="reward-box">
                   
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/images/Alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/images/WeChatpay.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
                   
                 </div>
               </span>
@@ -433,6 +443,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8c-%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9D%A5%E7%90%86%E8%A7%A3"><span class="toc-number">1.</span> <span class="toc-text">用c++的方式来理解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%81%E6%88%96%E8%BF%90%E7%AE%97%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E6%8C%87%E4%BB%A4%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%93%8D%E4%BD%9C%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BD%8D%E6%95%B0%E5%BA%94%E5%BD%93%E6%98%AF%E4%B8%80%E8%87%B4%E7%9A%84%EF%BC%8C%E4%BB%A5%E4%B8%8B%E4%B8%BA%E9%94%99%E8%AF%AF%E6%8C%87%E4%BB%A4"><span class="toc-number"></span> <span class="toc-text">进行数据传送或运算的时候，指令的两个操作对象的位数应当是一致的，以下为错误指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E7%9C%81%E7%95%A5%E2%80%A6%E6%8E%A8%E8%8D%90%E5%9C%A8%E8%8D%89%E7%A8%BF%E7%BA%B8%E4%B8%8A%E8%87%AA%E8%A1%8C%E6%BC%94%E7%A4%BA"><span class="toc-number"></span> <span class="toc-text">以下省略…推荐在草稿纸上自行演示</span></a>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -451,6 +474,30 @@
 </script>
 
 
+
+
+
+
+  <div id="giteement-ctn"></div>
+  
+    <link rel="stylesheet" href="/lib/default.css">
+    <script src="/lib/giteement.browser.js"></script>
+  
+  <script>
+  <!-- id: "对汇编的小理解" -->
+  var giteement = new Giteement({
+    id: '20201104221515',
+    owner: '',
+    repo: '',
+    backcall_uri: '',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '',
+      client_secret: ''
+    },
+  })
+  giteement.render('giteement-ctn')
+  </script>
 
 
 
@@ -785,6 +832,35 @@
   </div>
 
   
+<script type="text/javascript" src="/plugins/TweenMax/TweenMax.min.js"></script>
+<script type="text/javascript" src="/plugins/TweenMax/HoverImg.js"></script>
+
+<script>
+
+
+  var hoverEffect = {
+    "subNav": ".left-col .social a"
+  }
+
+
+  for (var x in hoverEffect) {
+    // 初始化data-img属性值
+    let $em = document.querySelectorAll(hoverEffect[x]);
+    $em.forEach(($a) => {
+      //console.log($a.href);
+      if (isImageType($a.href)) {
+        $a.setAttribute("data-img", $a.href)
+      }
+    })
+    // 实现悬停元素预览图片效果
+    let $a = document.querySelectorAll(hoverEffect[x] + "[data-img]");
+    $a.forEach(($em) => {
+      new HoverImgFx1($em)
+    })
+  }
+
+</script>
+
   
 <script type="text/javascript" src="/plugins/activate-power-mode/activate-power-mode.js"></script>
 <script>
@@ -830,10 +906,10 @@
     },
     display: {
        position: "right", 
-       width: 145, 
-       height: 315, 
-       hOffset: 50, 
-       vOffset: -20 
+       width: 160, 
+       height: 320, 
+       hOffset: 90, 
+       vOffset: 10 
     },
     mobile: {
        show: false, 
