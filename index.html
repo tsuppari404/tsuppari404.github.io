@@ -294,7 +294,7 @@
 
 
   
-    <article id="post-随意复现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-随意复现-2021ciscn" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -302,7 +302,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2021/05/12/%E9%9A%8F%E6%84%8F%E5%A4%8D%E7%8E%B0/" target="_blank">随意复现</a>
+	  <a class="article-title" href="/2021/05/16/%E9%9A%8F%E6%84%8F%E5%A4%8D%E7%8E%B0-2021ciscn/" target="_blank">随意复现--2021ciscn</a>
   
     </h1>
   
@@ -310,7 +310,109 @@
 
   
   
-<a href="/2021/05/12/%E9%9A%8F%E6%84%8F%E5%A4%8D%E7%8E%B0/" class="archive-article-date">
+<a href="/2021/05/16/%E9%9A%8F%E6%84%8F%E5%A4%8D%E7%8E%B0-2021ciscn/" class="archive-article-date">
+        <time datetime="2021-05-16T12:51:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-16</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="2021-5-15-ciscn"><a href="#2021-5-15-ciscn" class="headerlink" title="2021.5.15 ciscn"></a>2021.5.15 ciscn</h3><h4 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h4><h5 id="隔空传话"><a href="#隔空传话" class="headerlink" title="隔空传话"></a>隔空传话</h5><p>下载下来一个data.txt，一堆数字与字符，查找后发现这是<a target="_blank" rel="noopener" href="http://www.sendsms.cn/pdu/">PDU短信的编码</a>，前面四句话与后面几句话不一样，前四句话翻译如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hello,bob!what is the flag?</span><br><span class="line"></span><br><span class="line">the first part of the flag is the first 8 digits of your phone number</span><br><span class="line"></span><br><span class="line">那其他部分呢</span><br><span class="line"></span><br><span class="line">看看你能从这些数据里发现什么？w465</span><br><span class="line"></span><br><span class="line">Receipient:+861503044200</span><br></pre></td></tr></table></figure>
+
+<p>flag前8位为15030442，后面的PDU翻译过来都是16进制字符串，且发送的时间都不相同。于是写脚本进网站翻译。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">with open(&#39;data.txt&#39;,&#39;r&#39;) as f:#data.txt为下载下来的文件，删去了前4行</span><br><span class="line">    data &#x3D; f.read()</span><br><span class="line">data &#x3D; data.splitlines()</span><br><span class="line">browser &#x3D; webdriver.Chrome(&#39;C:\Program Files\Google\Chrome\Application\chromedriver.exe&#39;)</span><br><span class="line">url &#x3D; &quot;http:&#x2F;&#x2F;www.sendsms.cn&#x2F;pdu&#x2F;&quot;</span><br><span class="line">browser.get(url)</span><br><span class="line">output &#x3D; &#39;&#39;</span><br><span class="line">for i in data:</span><br><span class="line">    browser.find_element_by_name(&quot;smsText2&quot;).clear()</span><br><span class="line">    browser.find_element_by_name(&quot;smsText2&quot;).send_keys(i)</span><br><span class="line">    browser.find_element_by_xpath(&quot;&#x2F;&#x2F;input[@name&#x3D;&#39;checkButton&#39;]&quot;).click()</span><br><span class="line">    recv &#x3D; browser.find_element_by_name(&quot;smsOut&quot;).get_attribute(&#39;value&#39;)</span><br><span class="line">    recv &#x3D; recv.split()</span><br><span class="line">    n &#x3D; 0</span><br><span class="line">    txt &#x3D; &#39;&#39;</span><br><span class="line">    for j in recv:#循环之后的 txt 为 短信时间+16进制码</span><br><span class="line">        if n &#x3D;&#x3D; 3:</span><br><span class="line">            txt +&#x3D; j</span><br><span class="line">        if n &#x3D;&#x3D; 13:</span><br><span class="line">            txt +&#x3D; j</span><br><span class="line">            txt +&#x3D; &#39;\n&#39;</span><br><span class="line">        n +&#x3D; 1</span><br><span class="line">    output +&#x3D; txt</span><br><span class="line">with open(&#39;out.txt&#39;,&#39;w&#39;) as f:</span><br><span class="line">    f.write(output)</span><br><span class="line">browser.quit()</span><br></pre></td></tr></table></figure>
+
+<p>小破脚本跑了很久，最后得到的out.txt如下：</p>
+<img src="/images/2021051601.png" width="40%" height="40%"/>
+
+<p>按照时间排序，用脚本排序，脚本如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;out.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    data = f.read()</span><br><span class="line">data = data.splitlines()</span><br><span class="line">n1 = []</span><br><span class="line">n2 = []</span><br><span class="line">output = <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">    time = i[:<span class="number">8</span>]</span><br><span class="line">    txt = i[<span class="number">8</span>:]</span><br><span class="line">    minute = <span class="built_in">int</span>(time[<span class="number">3</span>:<span class="number">5</span>])</span><br><span class="line">    sec = <span class="built_in">int</span>(time[<span class="number">6</span>:<span class="number">8</span>])</span><br><span class="line">    num = minute*<span class="number">60</span>+sec</span><br><span class="line">    n1.append(num)</span><br><span class="line">    n2.append(txt)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">5000</span>):<span class="comment">#排序输出</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(data)):</span><br><span class="line">        <span class="keyword">if</span> i == n1[j]:</span><br><span class="line">            output += n2[j]</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;output.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(output)</span><br></pre></td></tr></table></figure>
+
+<p>发现文件output.txt的开头89504e47是png文件头，但是宽被修改过，联系前面的信息：w465，可猜测宽为465，于是得到图片</p>
+<img src="/images/2021051602.png" width="40%" height="40%"/>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CISCN&#123;15030442_b586_4c9e_b436_26def12293e4&#125;</span><br></pre></td></tr></table></figure>
+
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/05/16/%E9%9A%8F%E6%84%8F%E5%A4%8D%E7%8E%B0-2021ciscn/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-随意复现-2021redhat" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/05/12/%E9%9A%8F%E6%84%8F%E5%A4%8D%E7%8E%B0-2021redhat/" target="_blank">随意复现——redhat</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/05/12/%E9%9A%8F%E6%84%8F%E5%A4%8D%E7%8E%B0-2021redhat/" class="archive-article-date">
         <time datetime="2021-05-12T12:15:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-12</time>
 </a>
 
@@ -325,7 +427,7 @@
     
     <p>收集一下自己各大赛把自己暴打的题目，特此复现一下。</p>
     
-    <a class="article-more-a" href="/2021/05/12/%E9%9A%8F%E6%84%8F%E5%A4%8D%E7%8E%B0/#more">more >></a>
+    <a class="article-more-a" href="/2021/05/12/%E9%9A%8F%E6%84%8F%E5%A4%8D%E7%8E%B0-2021redhat/#more">more >></a>
     
     
 
@@ -352,7 +454,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2021/05/12/%E9%9A%8F%E6%84%8F%E5%A4%8D%E7%8E%B0/">展开全文 >></a>
+      <a class="article-more-a" href="/2021/05/12/%E9%9A%8F%E6%84%8F%E5%A4%8D%E7%8E%B0-2021redhat/">展开全文 >></a>
     </p>
     
 
@@ -993,95 +1095,6 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2020/12/06/%E5%AF%B9%E6%B1%87%E7%BC%96%E7%9A%84%E5%B0%8F%E6%80%BB%E7%BB%93%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E7%89%88-%EF%BC%89/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-阴转晴的周末" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/11/21/%E9%98%B4%E8%BD%AC%E6%99%B4%E7%9A%84%E5%91%A8%E6%9C%AB/" target="_blank">阴转晴的周末</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/11/21/%E9%98%B4%E8%BD%AC%E6%99%B4%E7%9A%84%E5%91%A8%E6%9C%AB/" class="archive-article-date">
-        <time datetime="2020-11-21T15:01:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-21</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>吐槽一下自己，最近感想有点多…</p>
-<p>2020.11.20<br>晚上情绪有点差，因为我在校的时候请假请得比较早，周二的假条就生效了。但是，在那之后，就收到了一个又一个的好消息🙂<br><img src="/images/2020112101.png" width="40%" height="40%"/><br><img src="/images/2020112102.png" width="40%" height="40%"/><br><img src="/images/2020112103.png" width="40%" height="40%"/><br><img src="/images/2020112104.png" width="40%" height="40%"/><br><img src="/images/2020112105.jpg" width="40%" height="40%"/><br>然后最丰富的一个周末，我回家了…<br>昨天在火车上不知道喊了多少句mmp，火车还晚点了半个小时，纪检还特别贴心的提醒我说我离校的时候<strong>钉钉未打卡</strong>，没有考勤打卡点的是签到🙂，当然这个是我的问题。总之就是贼气的那种。到了家吃完饭都10点多了。</p>
-    
-    <a class="article-more-a" href="/2020/11/21/%E9%98%B4%E8%BD%AC%E6%99%B4%E7%9A%84%E5%91%A8%E6%9C%AB/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">感想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/11/21/%E9%98%B4%E8%BD%AC%E6%99%B4%E7%9A%84%E5%91%A8%E6%9C%AB/">展开全文 >></a>
     </p>
     
 
