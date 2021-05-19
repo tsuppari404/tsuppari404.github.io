@@ -18,7 +18,7 @@
 <meta property="og:description" content="0x01 前言苦于学校无密码手，多次比赛面对RSA的题目都束手无策，决定花小部分时间学习一下RSA，熟悉一下crypto的函数。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-05-19T02:32:07.000Z">
-<meta property="article:modified_time" content="2021-05-19T03:29:44.399Z">
+<meta property="article:modified_time" content="2021-05-19T03:48:17.210Z">
 <meta property="article:author" content="つっぱり">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -228,7 +228,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">259字</span>
+      <span class="post-count">277字</span>
     </span>
   </span>
 
@@ -293,7 +293,9 @@
 
 
 
-<h4 id="0x03-过程"><a href="#0x03-过程" class="headerlink" title="0x03 过程"></a>0x03 过程</h4><h5 id="基础解密脚本："><a href="#基础解密脚本：" class="headerlink" title="基础解密脚本："></a>基础解密脚本：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"></span><br><span class="line"><span class="comment">#这边我用yafu分解了n</span></span><br><span class="line">p=<span class="number">780900790334269659443297956843</span></span><br><span class="line">q=<span class="number">1034526559407993507734818408829</span></span><br><span class="line">n=p*q</span><br><span class="line">e=<span class="number">0x10001</span></span><br><span class="line">c=<span class="number">0x534280240c65bb1104ce3000bc8181363806e7173418d15762</span></span><br><span class="line">phi=(p<span class="number">-1</span>)*(q<span class="number">-1</span>)</span><br><span class="line">d=gmpy2.invert(e,phi)</span><br><span class="line">m=<span class="built_in">pow</span>(c,d,n)</span><br><span class="line">print(<span class="built_in">hex</span>(m))</span><br></pre></td></tr></table></figure>
+<h4 id="0x03-过程"><a href="#0x03-过程" class="headerlink" title="0x03 过程"></a>0x03 过程</h4><h5 id="加密过程："><a href="#加密过程：" class="headerlink" title="加密过程："></a>加密过程：</h5><p>c=m^e mod n</p>
+<h5 id="解密过程："><a href="#解密过程：" class="headerlink" title="解密过程："></a>解密过程：</h5><p>m=c^d mod n</p>
+<h5 id="基础解密脚本："><a href="#基础解密脚本：" class="headerlink" title="基础解密脚本："></a>基础解密脚本：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"></span><br><span class="line"><span class="comment">#这边我用yafu分解了n</span></span><br><span class="line">p=<span class="number">780900790334269659443297956843</span></span><br><span class="line">q=<span class="number">1034526559407993507734818408829</span></span><br><span class="line">n=p*q</span><br><span class="line">e=<span class="number">0x10001</span></span><br><span class="line">c=<span class="number">0x534280240c65bb1104ce3000bc8181363806e7173418d15762</span></span><br><span class="line">phi=(p<span class="number">-1</span>)*(q<span class="number">-1</span>)</span><br><span class="line">d=gmpy2.invert(e,phi)</span><br><span class="line">m=<span class="built_in">pow</span>(c,d,n)</span><br><span class="line">print(<span class="built_in">hex</span>(m))</span><br></pre></td></tr></table></figure>
 
 
     
@@ -463,7 +465,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#0x01-%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">0x01 前言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0x02-%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">0x02 简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0x03-%E8%BF%87%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">0x03 过程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%A7%A3%E5%AF%86%E8%84%9A%E6%9C%AC%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">基础解密脚本：</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#0x01-%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">0x01 前言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0x02-%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">0x02 简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0x03-%E8%BF%87%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">0x03 过程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%A0%E5%AF%86%E8%BF%87%E7%A8%8B%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">加密过程：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%A3%E5%AF%86%E8%BF%87%E7%A8%8B%EF%BC%9A"><span class="toc-number">3.2.</span> <span class="toc-text">解密过程：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%A7%A3%E5%AF%86%E8%84%9A%E6%9C%AC%EF%BC%9A"><span class="toc-number">3.3.</span> <span class="toc-text">基础解密脚本：</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
