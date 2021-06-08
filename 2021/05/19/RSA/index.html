@@ -18,7 +18,7 @@
 <meta property="og:description" content="0x01 前言苦于学校无密码手，多次比赛面对RSA的题目都束手无策，决定花小部分时间学习一下RSA，熟悉一下crypto的函数。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-05-19T02:32:07.000Z">
-<meta property="article:modified_time" content="2021-05-19T03:48:17.210Z">
+<meta property="article:modified_time" content="2021-05-23T12:49:08.554Z">
 <meta property="article:author" content="つっぱり">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -228,7 +228,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">277字</span>
+      <span class="post-count">332字</span>
     </span>
   </span>
 
@@ -297,6 +297,9 @@
 <h5 id="解密过程："><a href="#解密过程：" class="headerlink" title="解密过程："></a>解密过程：</h5><p>m=c^d mod n</p>
 <h5 id="基础解密脚本："><a href="#基础解密脚本：" class="headerlink" title="基础解密脚本："></a>基础解密脚本：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"></span><br><span class="line"><span class="comment">#这边我用yafu分解了n</span></span><br><span class="line">p=<span class="number">780900790334269659443297956843</span></span><br><span class="line">q=<span class="number">1034526559407993507734818408829</span></span><br><span class="line">n=p*q</span><br><span class="line">e=<span class="number">0x10001</span></span><br><span class="line">c=<span class="number">0x534280240c65bb1104ce3000bc8181363806e7173418d15762</span></span><br><span class="line">phi=(p<span class="number">-1</span>)*(q<span class="number">-1</span>)</span><br><span class="line">d=gmpy2.invert(e,phi)</span><br><span class="line">m=<span class="built_in">pow</span>(c,d,n)</span><br><span class="line">print(<span class="built_in">hex</span>(m))</span><br></pre></td></tr></table></figure>
 
+
+
+<h4 id="0x04-常见函数"><a href="#0x04-常见函数" class="headerlink" title="0x04 常见函数"></a>0x04 常见函数</h4><h5 id="gmpy2"><a href="#gmpy2" class="headerlink" title="gmpy2:"></a>gmpy2:</h5><p>iroot(x,n):对整数x开n次方，返回第一个数为开方结果向下取整数据类型为<strong>mpz</strong>；第二个为bool变量，若能开整方为True，否则为False。</p>
 
     
 
@@ -436,6 +439,15 @@
 
 <nav id="article-nav">
   
+    <a href="/2021/06/08/%E6%9D%82%EF%BC%8C%E9%9D%9E%E5%B8%B8%E6%9D%82/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          杂，非常杂
+        
+      </div>
+    </a>
+  
   
     <a href="/2021/05/16/%E9%9A%8F%E6%84%8F%E5%A4%8D%E7%8E%B0-2021ciscn/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">随意复现--2021ciscn</div>
@@ -465,7 +477,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#0x01-%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">0x01 前言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0x02-%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">0x02 简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0x03-%E8%BF%87%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">0x03 过程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%A0%E5%AF%86%E8%BF%87%E7%A8%8B%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">加密过程：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%A3%E5%AF%86%E8%BF%87%E7%A8%8B%EF%BC%9A"><span class="toc-number">3.2.</span> <span class="toc-text">解密过程：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%A7%A3%E5%AF%86%E8%84%9A%E6%9C%AC%EF%BC%9A"><span class="toc-number">3.3.</span> <span class="toc-text">基础解密脚本：</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#0x01-%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">0x01 前言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0x02-%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">0x02 简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0x03-%E8%BF%87%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">0x03 过程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%A0%E5%AF%86%E8%BF%87%E7%A8%8B%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">加密过程：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%A3%E5%AF%86%E8%BF%87%E7%A8%8B%EF%BC%9A"><span class="toc-number">3.2.</span> <span class="toc-text">解密过程：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%A7%A3%E5%AF%86%E8%84%9A%E6%9C%AC%EF%BC%9A"><span class="toc-number">3.3.</span> <span class="toc-text">基础解密脚本：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0x04-%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0"><span class="toc-number">4.</span> <span class="toc-text">0x04 常见函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#gmpy2"><span class="toc-number">4.1.</span> <span class="toc-text">gmpy2:</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -735,6 +747,16 @@
                   <i class="icon-link icon"></i>
                 
                 karsa
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.darry-long.top/" target="_blank" 
+                class="search-title" >
+                
+                  <i class="icon-link icon"></i>
+                
+                Darry
               </a>
             </li>
           
