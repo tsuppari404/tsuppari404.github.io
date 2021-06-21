@@ -6,7 +6,7 @@
   <link href="https://tsuppari404.github.io/atom.xml" rel="self"/>
   
   <link href="https://tsuppari404.github.io/"/>
-  <updated>2021-06-08T11:54:44.120Z</updated>
+  <updated>2021-06-21T12:40:17.166Z</updated>
   <id>https://tsuppari404.github.io/</id>
   
   <author>
@@ -17,11 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>杂，非常杂</title>
-    <link href="https://tsuppari404.github.io/2021/06/08/%E6%9D%82%EF%BC%8C%E9%9D%9E%E5%B8%B8%E6%9D%82/"/>
-    <id>https://tsuppari404.github.io/2021/06/08/%E6%9D%82%EF%BC%8C%E9%9D%9E%E5%B8%B8%E6%9D%82/</id>
+    <title>福州划水小选手</title>
+    <link href="https://tsuppari404.github.io/2021/06/21/%E7%A6%8F%E5%B7%9E%E5%88%92%E6%B0%B4%E5%B0%8F%E9%80%89%E6%89%8B/"/>
+    <id>https://tsuppari404.github.io/2021/06/21/%E7%A6%8F%E5%B7%9E%E5%88%92%E6%B0%B4%E5%B0%8F%E9%80%89%E6%89%8B/</id>
+    <published>2021-06-21T12:40:17.000Z</published>
+    <updated>2021-06-21T12:40:17.166Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>杂_非常杂</title>
+    <link href="https://tsuppari404.github.io/2021/06/08/%E6%9D%82_%E9%9D%9E%E5%B8%B8%E6%9D%82/"/>
+    <id>https://tsuppari404.github.io/2021/06/08/%E6%9D%82_%E9%9D%9E%E5%B8%B8%E6%9D%82/</id>
     <published>2021-06-08T11:44:53.000Z</published>
-    <updated>2021-06-08T11:54:44.120Z</updated>
+    <updated>2021-06-08T12:11:18.521Z</updated>
     
     <content type="html"><![CDATA[<p>misc也获得了属于它的一块地方。</p><a id="more"></a><h3 id="pdf密码破解工具——pdfcrack"><a href="#pdf密码破解工具——pdfcrack" class="headerlink" title="pdf密码破解工具——pdfcrack"></a>pdf密码破解工具——pdfcrack</h3><p>pdfcrack是破解PDF保护密码的Linux命令行工具。</p><h4 id="0x01-安装"><a href="#0x01-安装" class="headerlink" title="0x01 安装"></a>0x01 安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install pdfcrack</span><br></pre></td></tr></table></figure><h4 id="0x02-用法"><a href="#0x02-用法" class="headerlink" title="0x02 用法"></a>0x02 用法</h4><img src="/images/2021060801.png" width="40%" height="40%"/><h4 id="0x03-示例"><a href="#0x03-示例" class="headerlink" title="0x03 示例"></a>0x03 示例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdfcrack -f filename.pdf -n 6 -m 8 -c 0123456789</span><br></pre></td></tr></table></figure><p>上面使用的参数解释：</p><p>-n：密码最短多少个字符</p><p>-m：密码最长多少个字符</p><p>-c：使用的字符集</p><p>更多选项，查看帮助：</p><p># man pdfcrack</p><img src="/images/2021060802.png" width="40%" height="40%"/>]]></content>
     
