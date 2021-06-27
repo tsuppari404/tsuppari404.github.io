@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://tsuppari404.github.io/images/2021060801.png">
 <meta property="og:image" content="https://tsuppari404.github.io/images/2021060802.png">
 <meta property="article:published_time" content="2021-06-08T11:44:53.000Z">
-<meta property="article:modified_time" content="2021-06-08T12:11:18.521Z">
+<meta property="article:modified_time" content="2021-06-27T09:12:42.548Z">
 <meta property="article:author" content="つっぱり">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -231,7 +231,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">104字</span>
+      <span class="post-count">253字</span>
     </span>
   </span>
 
@@ -253,6 +253,10 @@
     
     <p>misc也获得了属于它的一块地方。</p>
 <a id="more"></a>
+
+<h3 id="二维码绘制脚本"><a href="#二维码绘制脚本" class="headerlink" title="二维码绘制脚本"></a>二维码绘制脚本</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image          <span class="comment">#必须要导入的包</span></span><br><span class="line">MAX = <span class="number">33</span>                       <span class="comment">#0-25=26，这里代表下标，不要像我一开始写26报错(25是因为一排26个数)</span></span><br><span class="line">pic = Image.new(<span class="string">&quot;RGB&quot;</span>,(MAX, MAX))            <span class="comment">#输出图片</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">&quot;111111100011001010001010001111111100000001100100000101001100000001101111100100000011110101001111101101000001001110010100011000000101101011101000010001010100101110101101011100100010000010101101110101101011101010011101000000101110101000000001000001001110010100000000000000000100100110000010011000000000000001011110110101100100100100000000001110111011101111110011101000000000001000010000101000111110000000011101110111010110101100111000000001011100010111000100101111000000011110111101100000111111111111010111100000001100011101100100111111111111111110000110110001001000000000000000010111111100100000100000000000000010101101000110110000111111000000011110100111000100111011000000000011001111101111110111101101000000010111010110110110101101100000000010101101100001001110111111000000010001101101101011000000110000000011011010001011000000000001001001011011010100000000111111101111110011001110101110101000000101010010011000111001110101111110101111110011110110101110101000010100000110011011000100000101111010100000110010010101001111101111010101111000011100010100000001111010100010111011111111001111111&quot;</span></span><br><span class="line">i=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span> (<span class="number">0</span>,MAX):</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span> (<span class="number">0</span>,MAX):</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">str</span>[i] == <span class="string">&#x27;1&#x27;</span>):</span><br><span class="line">            pic.putpixel([x,y],(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>))              <span class="comment">#根据xy代表每一个像素点，000代表黑色</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            pic.putpixel([x,y],(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))         <span class="comment">#255代表白色</span></span><br><span class="line">        i = i+<span class="number">1</span></span><br><span class="line">pic.show()</span><br><span class="line">pic.save(<span class="string">&quot;flag.png&quot;</span>)</span><br><span class="line"><span class="comment">#该脚本是2021GKCTF excel的绘图脚本 脚本出来的是汉信码</span></span><br></pre></td></tr></table></figure>
+
+
 
 <h3 id="pdf密码破解工具——pdfcrack"><a href="#pdf密码破解工具——pdfcrack" class="headerlink" title="pdf密码破解工具——pdfcrack"></a>pdf密码破解工具——pdfcrack</h3><p>pdfcrack是破解PDF保护密码的Linux命令行工具。</p>
 <h4 id="0x01-安装"><a href="#0x01-安装" class="headerlink" title="0x01 安装"></a>0x01 安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install pdfcrack</span><br></pre></td></tr></table></figure>
@@ -444,7 +448,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#pdf%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94pdfcrack"><span class="toc-number">1.</span> <span class="toc-text">pdf密码破解工具——pdfcrack</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#0x01-%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">0x01 安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0x02-%E7%94%A8%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">0x02 用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0x03-%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.3.</span> <span class="toc-text">0x03 示例</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%BB%98%E5%88%B6%E8%84%9A%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">二维码绘制脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pdf%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94pdfcrack"><span class="toc-number">2.</span> <span class="toc-text">pdf密码破解工具——pdfcrack</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#0x01-%E5%AE%89%E8%A3%85"><span class="toc-number">2.1.</span> <span class="toc-text">0x01 安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0x02-%E7%94%A8%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">0x02 用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0x03-%E7%A4%BA%E4%BE%8B"><span class="toc-number">2.3.</span> <span class="toc-text">0x03 示例</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
